@@ -21,7 +21,7 @@ const textBlock = {
   justifyContent: 'space-between',
   maxWidth: '700px',
   minWidth: '700px',
-  marginLeft: '15px',
+  marginLeft: '10px',
   width: 'auto',
   height: 'auto',
 }
@@ -34,7 +34,10 @@ const imageHeight = {
 }
 
 const pStyle = {
-  marginLeft: '1%',
+  maxWidth: '400px',
+  minWidth: '400px',
+  width: 'auto',
+  height: 'auto',
 }
 
 const likeStyle = {
