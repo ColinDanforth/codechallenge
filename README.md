@@ -9,5 +9,5 @@ in your console.
 npm start
 ```
 
-Please note, that any calls to the 500px api will fail without a valide consumer.js file. If you are 
+Please note, that any calls to the 500px api will fail without a valid consumer.js file. If you are 
 meant to view this information a valid file will be supplied to you.

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ImagePage from "./components/ImagePage"
+import ImagePage from "./components/imageDisplay/ImagePage"
 
 class App extends Component {
   render() {
