@@ -7,10 +7,11 @@ const rootCard = {
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  width: '80%',
+  width: '70%',
   height: 'auto',
   marginBottom: '1%',
-  backgroundColor: '#000',
+  backgroundColor: '#FFF',
+  cursor: 'pointer'
 }
 
 const imageWrapper = {
@@ -18,8 +19,9 @@ const imageWrapper = {
   marginBottom: '2%',
 }
 
-const imageHeight = {
-  maxHeight: '280px',
+const imageObjectStyle = {
+  maxWidth: '500px',
+  minWidth: '200px',
   width: 'auto',
   height: 'auto',
 }
@@ -28,8 +30,13 @@ class ImageItem extends React.Component{
   render(){
     return(
       <div style={rootCard}>
+        {this.props.thisItem.name.length > 0 ?
+          (<h1>{this.props.thisItem.name}</h1>)
+            :
+          (<div/>)
+        }
         <div style={imageWrapper}>
-          <img style={imageHeight} src={this.props.thisItem.images[0].url} alt="test"/>
+          <img style={imageObjectStyle} src={this.props.thisItem.image_url} alt="test"/>
         </div>
         <DataCard dataObject={this.props.thisItem}/>
       </div>

@@ -2,7 +2,7 @@ import key from '../consumer'
 
 const fetchPopular = async(currentPage) => {
 
-  return await fetch(`https://api.500px.com/v1/photos?feature=popular&image_size=20&page=${currentPage}&consumer_key=${key.key}`,
+  return await fetch(`https://api.500px.com/v1/photos?feature=popular&image_size=1080&page=${currentPage}&consumer_key=${key.key}`,
     {
       headers: new Headers({
         'Content-Type': 'application/json, UTF-8',

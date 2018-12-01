@@ -1,6 +1,20 @@
 import React from 'react'
 import client from '../client'
 import ImageItem from "./imageCards/ImageItem"
+import backgroundImage from '../backgroundimage.jpg'
+
+const background = {
+  position: 'fixed',
+  zIndex: '-2',
+  top: '0px',
+  left: '0px',
+  width: '100%',
+  height: '100%',
+  backgroundImage: `url(${backgroundImage})`,
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+}
 
 const centerRootDiv={
   display: 'flex',
@@ -15,7 +29,7 @@ const feedStyle={
   justifyContent: 'center',
   alignItems: 'center',
   alignContent: 'center',
-  width: '70%',
+  width: '900px',
   height: 'auto',
 }
 
@@ -62,6 +76,7 @@ class ImagePage extends React.Component{
   render(){
     return(
       <div style={centerRootDiv}>
+        <div style={background}/>
         {this.state.images.length > 0 ?
           (
             <div style={feedStyle}>
@@ -70,7 +85,7 @@ class ImagePage extends React.Component{
             </div>
           )
           :
-          (<p>but why</p>)
+          (<div style={{'display': 'none'}}/>)
         }
       </div>
     )
