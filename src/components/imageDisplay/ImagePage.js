@@ -29,7 +29,9 @@ const feedStyle={
   justifyContent: 'center',
   alignItems: 'center',
   alignContent: 'center',
-  width: '900px',
+  maxWidth: '1200px',
+  minWidth: '1200px',
+  width: 'auto',
   height: 'auto',
 }
 

@@ -20,8 +20,8 @@ const imageWrapper = {
 }
 
 const imageObjectStyle = {
-  maxWidth: '500px',
-  minWidth: '200px',
+  maxWidth: '840px',
+  minWidth: '840px',
   width: 'auto',
   height: 'auto',
 }
