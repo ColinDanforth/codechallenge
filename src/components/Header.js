@@ -9,7 +9,8 @@ const headerStyle={
   left: '0px',
   width: '100%',
   hieght: 'auto',
-  backgroundColor: '#FFF'
+  backgroundColor: '#FFF',
+  borderBottom: 'outset'
 }
 
 const logoStyle = {

@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import like from '../../like.png'
 
 const rootDataCardStyle={
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'flex-start',
-  maxWidth: '500px',
-  minWidth: '200px',
+  maxWidth: '820px',
+  minWidth: '820px',
   backgroundColor: '#FFF',
   margin: '2%',
   borderTop: 'inset',
@@ -15,8 +16,11 @@ const rootDataCardStyle={
 }
 
 const textBlock = {
-  maxWidth: '600px',
-  minWidth: '400px',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  maxWidth: '700px',
+  minWidth: '700px',
   marginLeft: '15px',
   width: 'auto',
   height: 'auto',
@@ -33,14 +37,27 @@ const pStyle = {
   marginLeft: '1%',
 }
 
+const likeStyle = {
+  maxWidth: '40px',
+  width: 'auto',
+  height: 'auto',
+  marginTop: '5px',
+  marginRight: '10px',
+}
+
 class DataCard extends React.Component{
   render(){
     return(
       <div style={rootDataCardStyle}>
         <img style={imageHeight} src={this.props.dataObject.user.avatars.default.https} alt="avatar"/>
         <div style={textBlock}>
-        <p style={pStyle}>Photographer: {this.props.dataObject.user.fullname}</p>
-        <p style={pStyle}>Rating: {this.props.dataObject.rating}%</p>
+          <div>
+            <p style={pStyle}>Photographer: {this.props.dataObject.user.fullname}</p>
+            <p style={pStyle}>Rating: {this.props.dataObject.rating}%</p>
+          </div>
+          <div>
+            <img style={likeStyle} src={like} alt='like'/>
+          </div>
         </div>
       </div>
     )
