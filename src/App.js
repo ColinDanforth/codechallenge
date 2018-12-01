@@ -4,7 +4,7 @@ import ImagePage from "./components/imageDisplay/ImagePage"
 class App extends Component {
   render() {
     return (
-      <div >
+      <div>
         <ImagePage/>
       </div>
     );

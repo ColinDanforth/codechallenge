@@ -1,14 +1,26 @@
 import React from 'react'
 import client from '../client'
+import ImageItem from "./ImageItem"
+
+const centerRootDiv={
+  display: 'flex',
+  justifyContent: 'center',
+  width: '100%',
+  height: 'auto',
+}
+
+const feedStyle={
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  alignContent: 'center',
+  width: '70%',
+  height: 'auto',
+}
 
 const popularImages = async (page) => {
   return await client.fetchPopular(page)
-}
-
-const imageHeight = {
-  maxHeight: '280px',
-  width: 'auto',
-  height: 'auto'
 }
 
 class ImagePage extends React.Component{
@@ -49,12 +61,12 @@ class ImagePage extends React.Component{
 
   render(){
     return(
-      <div>
+      <div style={centerRootDiv}>
         {this.state.images.length > 0 ?
           (
-            <div>
+            <div style={feedStyle}>
               {this.state.images.map((imagePages, i) => {
-                return imagePages.photos.map((object, i) => <img style={imageHeight} key={i} src={object.images[0].url} alt="test"/>)})}
+                return imagePages.photos.map((object, i) => <ImageItem key={i} thisItem={object}/>)})}
             </div>
           )
           :
