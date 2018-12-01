@@ -1,6 +1,6 @@
 import React from 'react'
 import client from '../client'
-import ImageItem from "./ImageItem"
+import ImageItem from "./imageCards/ImageItem"
 
 const centerRootDiv={
   display: 'flex',
