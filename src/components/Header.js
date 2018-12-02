@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Logo from './500px_logo_detail.png'
+import {Link} from "react-router-dom"
 import ReactResizeDetector from 'react-resize-detector';
 
 const headerStyle={
@@ -21,13 +22,30 @@ const logoStyle = {
 }
 
 class Header extends React.Component{
+  constructor(){
+    super()
+    this.state={
+      navBlock: {
+        position: 'fixed',
+        marginLeft: '0px',
+      }
+    }
+
+    this.onResize = this.onResize.bind(this)
+  }
+
+  onResize(width, height){
+    let navBlock = this.state.navBlock
+    navBlock.marginLeft = width + 'px'
+    this.setState({
+      navBlock: navBlock
+    })
+  }
+
   render(){
     return(
       <div style={headerStyle}>
-        <a href='/'>
-          <img style={logoStyle} src={Logo} alt='logo'/>
-        </a>
-        <ReactResizeDetector handleWidth handleHeight onResize={this.props.onResize} />
+
       </div>
     )
   }

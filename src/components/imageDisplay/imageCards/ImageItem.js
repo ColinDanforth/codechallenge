@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import DataCard from "./DataCard"
+import {Redirect} from 'react-router-dom'
 
 const rootCard = {
   display: 'flex',
@@ -11,7 +12,6 @@ const rootCard = {
   height: 'auto',
   marginBottom: '1%',
   backgroundColor: '#FFF',
-  cursor: 'pointer'
 }
 
 const imageWrapper = {
@@ -24,10 +24,30 @@ const imageObjectStyle = {
   minWidth: '840px',
   width: 'auto',
   height: 'auto',
+  cursor: 'pointer',
 }
 
 class ImageItem extends React.Component{
+  constructor(){
+    super()
+    this.state= {
+      redirect: false
+    }
+
+    this.makeFullScreen = this.makeFullScreen.bind(this)
+  }
+
+  makeFullScreen(){
+    this.setState({
+      redirect: true
+    })
+  }
+
   render(){
+    if (this.state.redirect) {
+      let url = '/fullscreen/' + this.props.thisItem.id
+      return <Redirect push to={url} />;
+    }
     return(
       <div style={rootCard}>
         {this.props.thisItem.name.length > 0 ?
@@ -36,7 +56,7 @@ class ImageItem extends React.Component{
           (<div/>)
         }
         <div style={imageWrapper}>
-          <img style={imageObjectStyle} src={this.props.thisItem.image_url} alt="test"/>
+          <img style={imageObjectStyle} src={this.props.thisItem.image_url} alt="test" onClick={this.makeFullScreen}/>
         </div>
         <DataCard dataObject={this.props.thisItem}/>
       </div>

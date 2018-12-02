@@ -2,6 +2,7 @@ import React from 'react'
 import client from '../client'
 import ImageItem from "./imageCards/ImageItem"
 import backgroundImage from '../backgroundimage.jpg'
+import PropTypes from 'prop-types'
 
 const background = {
   position: 'fixed',
@@ -21,6 +22,7 @@ const centerRootDiv={
   justifyContent: 'center',
   width: '100%',
   height: 'auto',
+  marginTop: '50px',
 }
 
 const feedStyle={
@@ -35,8 +37,8 @@ const feedStyle={
   height: 'auto',
 }
 
-const popularImages = async (page) => {
-  return await client.fetchPopular(page)
+const fetchImages = async (stream, page) => {
+  return await client.fetchFeed(stream, page)
 }
 
 class ImagePage extends React.Component{
@@ -44,7 +46,7 @@ class ImagePage extends React.Component{
     super()
     this.state= {
       images: [],
-      page: 1
+      page: 1,
     }
 
     this.loadMoreImages = this.loadMoreImages.bind(this)
@@ -64,7 +66,7 @@ class ImagePage extends React.Component{
   }
 
   loadMoreImages(){
-    popularImages(this.state.page)
+    fetchImages(this.props.stream, this.state.page)
       .then(response => {
         const page = this.state.page + 1
         this.setState({
@@ -95,3 +97,7 @@ class ImagePage extends React.Component{
 }
 
 export default ImagePage
+
+ImagePage.propTypes={
+  stream: PropTypes.string,
+}
