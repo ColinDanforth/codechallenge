@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ImagePage from "./components/imageDisplay/ImagePage"
 import {BrowserRouter as Router, Link, Route} from "react-router-dom"
 import Logo from "./components/500px_logo_detail.png"
-import ReactResizeDetector from "react-resize-detector"
 import FullScreenImageItem from "./components/imageDisplay/fullScreenImage/FullScreenImageItem"
 
 const headerStyle={
@@ -12,7 +11,10 @@ const headerStyle={
   width: '100%',
   hieght: 'auto',
   backgroundColor: '#FFF',
-  borderBottom: 'outset'
+  borderBottom: 'outset',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'flex-start'
 }
 
 const logoPosition={
@@ -22,7 +24,7 @@ const logoPosition={
 
 const logoStyle = {
   maxWidth: '100px',
-  width: 'auto',
+  width: '100%',
   height: 'auto',
   marginLeft: '8%',
   marginBottom: '3%',
@@ -30,52 +32,25 @@ const logoStyle = {
 }
 
 const linkPosition={
-  position: 'absolute',
-  left: '38%',
-  top: '53%',
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'row',
+  flex: '1',
 }
 
 const linkStyle={
-  margin: '10px',
-}
-
-const fullImageFlexStyle = {
-  display: 'flex',
-  flexDirection:'column',
-  justifyContent:'center',
+  marginLeft: '10px',
+  marginRight: '10px',
+  fontSize: '1.8em',
 }
 
 const fullScreenImage = ({match}) => {
   return(
-    <div style={fullImageFlexStyle}>
-      <FullScreenImageItem thisItem={match.params.id}/>
-    </div>
+    <FullScreenImageItem thisItem={match.params.id}/>
   )
 }
 
 class App extends Component {
-  constructor(){
-    super()
-    this.state={
-      headerHeight: {
-        display: 'hidden',
-        height: '0px'
-      },
-    }
-
-    this.onResizeHeader = this.onResizeHeader.bind(this)
-  }
-
-  onResizeHeader(width, height){
-    this.setState({
-      headerHeight: {
-        display: 'hidden',
-        height: height + 'px'
-      }
-    })
-    console.log(height)
-  }
-
   render() {
     return (
       <Router>
@@ -90,9 +65,7 @@ class App extends Component {
               <Link style={linkStyle} to="/upcoming">UpComing</Link>
               <Link style={linkStyle} to="/editorschoice">Editor's Choice</Link>
             </div>
-            <ReactResizeDetector handleWidth handleHeight onResize={this.props.onResizeHeader}/>
           </div>
-          <div style={this.state.headerHeight}/>
           <Route exact path="/" render={()=><ImagePage stream='popular'/>}/>
           <Route exact path="/fresh" render={()=><ImagePage stream='fresh'/>}/>
           <Route exact path="/upcoming" render={()=><ImagePage stream='upcoming'/>}/>

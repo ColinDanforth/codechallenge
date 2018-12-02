@@ -47,6 +47,8 @@ class ImagePage extends React.Component{
     this.state= {
       images: [],
       page: 1,
+      loading: false,
+      initialLoad: false,
     }
 
     this.loadMoreImages = this.loadMoreImages.bind(this)
@@ -54,8 +56,13 @@ class ImagePage extends React.Component{
     window.onscroll = () => {
       if (
         window.innerHeight + document.documentElement.scrollTop
-        === document.documentElement.offsetHeight
+        > document.documentElement.offsetHeight - 2000
+        && this.state.loading === false
+        && this.state.initialLoad === true
       ) {
+        this.setState({
+          loading: true,
+        })
         this.loadMoreImages()
       }
     }
@@ -72,6 +79,8 @@ class ImagePage extends React.Component{
         this.setState({
           images: this.state.images.concat([response]),
           page:  page,
+          loading: false,
+          initialLoad: true,
         })
       })
   }
