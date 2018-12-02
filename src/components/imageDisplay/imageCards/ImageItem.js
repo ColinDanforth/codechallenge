@@ -30,24 +30,15 @@ const imageObjectStyle = {
 class ImageItem extends React.Component{
   constructor(){
     super()
-    this.state= {
-      redirect: false
-    }
 
-    this.makeFullScreen = this.makeFullScreen.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
-  makeFullScreen(){
-    this.setState({
-      redirect: true
-    })
+  handleClick(){
+    this.props.makeFullScreen(this.props.thisItem.id)
   }
 
   render(){
-    if (this.state.redirect) {
-      let url = '/fullscreen/' + this.props.thisItem.id
-      return <Redirect push to={url} />;
-    }
     return(
       <div style={rootCard}>
         {this.props.thisItem.name.length > 0 ?
@@ -56,7 +47,7 @@ class ImageItem extends React.Component{
           (<div/>)
         }
         <div style={imageWrapper}>
-          <img style={imageObjectStyle} src={this.props.thisItem.image_url} alt="test" onClick={this.makeFullScreen}/>
+          <img style={imageObjectStyle} src={this.props.thisItem.image_url} alt="test" onClick={this.handleClick}/>
         </div>
         <DataCard dataObject={this.props.thisItem}/>
       </div>
@@ -67,5 +58,6 @@ class ImageItem extends React.Component{
 export default ImageItem
 
 ImageItem.propTypes={
-  thisItem: PropTypes.object
+  thisItem: PropTypes.object,
+  makeFullScreen: PropTypes.func,
 }

@@ -44,12 +44,6 @@ const linkStyle={
   fontSize: '1.8em',
 }
 
-const fullScreenImage = ({match}) => {
-  return(
-    <FullScreenImageItem thisItem={match.params.id}/>
-  )
-}
-
 class App extends Component {
   render() {
     return (
@@ -70,7 +64,6 @@ class App extends Component {
           <Route exact path="/fresh" render={()=><ImagePage stream='fresh'/>}/>
           <Route exact path="/upcoming" render={()=><ImagePage stream='upcoming'/>}/>
           <Route exact path="/editorschoice" render={()=><ImagePage stream='editorschoice'/>}/>
-          <Route path="/fullscreen/:id" component={fullScreenImage}/>
         </div>
       </Router>
     )

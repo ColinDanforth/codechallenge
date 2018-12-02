@@ -1,7 +1,7 @@
 import key from '../consumer'
 
 const fetchFeed = async(stream, currentPage) => {
-  return await fetch(`https://api.500px.com/v1/photos?feature=${stream}&image_size=1080&page=${currentPage}&consumer_key=${key.key}`,
+  return await fetch(`https://api.500px.com/v1/photos?feature=${stream}&image_size=5&page=${currentPage}&consumer_key=${key.key}`,
     {
       headers: new Headers({
         'Content-Type': 'application/json, UTF-8',
@@ -29,7 +29,7 @@ const fetchFeed = async(stream, currentPage) => {
 }
 
 const fetchImage = async(imageId) => {
-  return await fetch(`https://api.500px.com/v1/photos?image_size=2048&expanded_user_info=true&include_tags=true&liked=1&include_equipment_info=true&ids=${imageId}&consumer_key=${key.key}`,
+  return await fetch(`https://api.500px.com/v1/photos?image_size=1080&expanded_user_info=true&include_tags=true&liked=1&include_equipment_info=true&ids=${imageId}&consumer_key=${key.key}`,
     {
       headers: new Headers({
         'Content-Type': 'application/json, UTF-8',

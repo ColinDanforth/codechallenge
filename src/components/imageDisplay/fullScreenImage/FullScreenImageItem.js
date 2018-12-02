@@ -6,16 +6,34 @@ const getImage = async(id) => {
   return await client.fetchImage(id)
 }
 
+
+const imageItem = {
+  maxWidth: '100vw',
+  minHeight: '100vh',
+  maxHeight: '100vh',
+  width: 'auto',
+}
+
 class FullScreenImageItem extends React.Component{
   constructor(){
     super()
     this.state={
-      imageStyle: {
-        flex: '1',
-        zIndex: '-1',
-      }
+      imageDiv: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        maxWidth: '100%',
+        height: 'auto',
+        width: 'auto',
+        cursor: 'pointer',
+        overflowY: 'scroll',
+      },
+      image: {},
+      dataObject: {}
     }
 
+    this.handleCloseFullScreen = this.handleCloseFullScreen.bind(this)
   }
 
   componentDidMount(){
@@ -25,25 +43,27 @@ class FullScreenImageItem extends React.Component{
 
     imageData()
       .then(thisImageData => {
-        console.log(thisImageData)
-        let imageStyle = {}
-        imageStyle.flex = this.state.imageStyle.flex
-        imageStyle.zIndex = this.state.imageStyle.zIndex
-        imageStyle.backgroundImage = `url(${thisImageData.images[0].url})`
-        imageStyle.backgroundPosition= 'center'
-        imageStyle.backgroundSize= 'cover'
-        imageStyle.backgroundRepeat= 'no-repeat'
-        imageStyle.backgroundSize = '100%'
-
         this.setState({
-          imageStyle: imageStyle
+          image: thisImageData.images[0].url,
+          dataObject: thisImageData
         })
       })
+      .then(() => this.props.setFullScreenImageData(this.state.dataObject))
   }
+
+  handleCloseFullScreen(){
+    this.props.closeFullScreen()
+  }
+
 
   render(){
     return(
-      <div style={this.state.imageStyle}/>
+      <div style={this.state.imageDiv} onClick={this.handleCloseFullScreen}>
+        <img style={imageItem}
+             src={this.state.image}
+             alt='image'
+        />
+      </div>
     )
   }
 }
@@ -51,5 +71,7 @@ class FullScreenImageItem extends React.Component{
 export default FullScreenImageItem
 
 FullScreenImageItem.propTypes={
-  thisItem: PropTypes.string
+  thisItem: PropTypes.number,
+  closeFullScreen: PropTypes.func,
+  setFullScreenImageData: PropTypes.func,
 }

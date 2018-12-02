@@ -3,6 +3,7 @@ import client from '../client'
 import ImageItem from "./imageCards/ImageItem"
 import backgroundImage from '../backgroundimage.jpg'
 import PropTypes from 'prop-types'
+import FullScreenImageItem from "./fullScreenImage/FullScreenImageItem"
 
 const background = {
   position: 'fixed',
@@ -25,16 +26,17 @@ const centerRootDiv={
   marginTop: '50px',
 }
 
-const feedStyle={
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-  alignContent: 'center',
-  maxWidth: '1200px',
-  minWidth: '1200px',
-  width: 'auto',
-  height: 'auto',
+const fullscreenBase = {
+  position: 'absolute',
+  zIndex: '30',
+  top: '0',
+  left: '0',
+  width:'100%',
+  height: '100%',
+  backgroundImage: `url(${backgroundImage})`,
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
 }
 
 const fetchImages = async (stream, page) => {
@@ -49,9 +51,25 @@ class ImagePage extends React.Component{
       page: 1,
       loading: false,
       initialLoad: false,
+      fullscreen: false,
+      feedStyle: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignContent: 'center',
+        maxWidth: '1200px',
+        minWidth: '1200px',
+        width: 'auto',
+        height: 'auto',
+      },
+      fullscreenData: {}
     }
 
     this.loadMoreImages = this.loadMoreImages.bind(this)
+    this.makeFullScreen = this.makeFullScreen.bind(this)
+    this.closeFullScreen = this.closeFullScreen.bind(this)
+    this.setFullScreenImageData = this.setFullScreenImageData.bind(this)
 
     window.onscroll = () => {
       if (
@@ -85,16 +103,88 @@ class ImagePage extends React.Component{
       })
   }
 
+  makeFullScreen(id){
+    var feedStyle = {
+      display: this.state.feedStyle.display,
+      flexDirection: this.state.feedStyle.flexDirection,
+      justifyContent: this.state.feedStyle.justifyContent,
+      alignItems: this.state.feedStyle.alignItems,
+      alignContent: this.state.feedStyle.alignContent,
+      maxWidth: this.state.feedStyle.maxWidth,
+      minWidth: this.state.feedStyle.minWidth,
+      width: this.state.feedStyle.width,
+      height: '100vh',
+      overflow: 'hidden',
+    }
+
+    const scrollTop = document.documentElement.scrollTop
+    const windowHeight = window.innerHeight
+
+    this.setState({
+      fullscreen: true,
+      fullscreenId: id,
+      loading: true,
+      scrollTop: scrollTop,
+      windowHeight: windowHeight,
+      feedStyle: feedStyle
+    })
+  }
+
+  closeFullScreen(){
+    var feedStyle = {
+      display: this.state.feedStyle.display,
+      flexDirection: this.state.feedStyle.flexDirection,
+      justifyContent: this.state.feedStyle.justifyContent,
+      alignItems: this.state.feedStyle.alignItems,
+      alignContent: this.state.feedStyle.alignContent,
+      maxWidth: this.state.feedStyle.maxWidth,
+      minWidth: this.state.feedStyle.minWidth,
+      width: this.state.feedStyle.width,
+      height: 'auto',
+    }
+    const setNewState = async () => {
+      await this.setState({
+        fullscreen: false,
+        feedStyle: feedStyle,
+        loading: false,
+      })
+    }
+
+    setNewState()
+      .then(() => {
+        document.documentElement.scrollTop = this.state.scrollTop
+        window.innerHeight = this.state.windowHeight
+      })
+  }
+
+  setFullScreenImageData(dataObject){
+    this.setState({
+      fullscreenData: dataObject
+    })
+  }
 
   render(){
     return(
       <div style={centerRootDiv}>
+        {this.state.fullscreen ?
+          (
+            <div style={fullscreenBase}>
+              <FullScreenImageItem
+                thisItem={this.state.fullscreenId}
+                closeFullScreen={this.closeFullScreen}
+                setFullScreenImageData={this.setFullScreenImageData}
+              />
+            </div>
+          )
+          :
+          (<div style={{'display': 'none'}}/>)
+        }
         <div style={background}/>
         {this.state.images.length > 0 ?
           (
-            <div style={feedStyle}>
+            <div style={this.state.feedStyle}>
               {this.state.images.map((imagePages, i) => {
-                return imagePages.photos.map((object, i) => <ImageItem key={i} thisItem={object}/>)})}
+                return imagePages.photos.map((object, i) => <ImageItem key={i} thisItem={object} makeFullScreen={this.makeFullScreen}/>)})}
             </div>
           )
           :
