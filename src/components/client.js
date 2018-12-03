@@ -26,6 +26,7 @@ const fetchFeed = async(stream, currentPage) => {
   })
     .then(stream => new Response(stream))
     .then(response => response.json())
+    .catch(e => console.log(JSON.stringify(e)))
 }
 
 const fetchImage = async(imageId) => {
@@ -55,13 +56,14 @@ const fetchImage = async(imageId) => {
     .then(stream => new Response(stream))
     .then(response => response.json())
     .then(thisImageData => thisImageData.photos[imageId])
+    .catch(e => console.log(JSON.stringify(e)))
 }
 
 const fetchImageComments = async(imageId) => {
-  return await fetch(`https://api.500px.com/v1/photos/${imageId}/comments?sort=created_at&&consumer_key=${key.key}`,
+  return await fetch(`https://api.500px.com/v1/photos/${imageId}/comments?sort=created_at&include_subscription=1&include_flagged=1&nested=1&page=1&rpp=30&consumer_key=${key.key}`,
     {
       headers: new Headers({
-        'Content-Type': 'application/json, UTF-8',
+        'Content-Type': 'application/json, text/javascript, */*; q=0.01',
       })
     }).then(response => {
     const reader = response.body.getReader()
@@ -83,6 +85,7 @@ const fetchImageComments = async(imageId) => {
   })
     .then(stream => new Response(stream))
     .then(response => response.json())
+    .catch(e => console.log(JSON.stringify(e)))
 }
 
 export default {fetchFeed, fetchImage, fetchImageComments}

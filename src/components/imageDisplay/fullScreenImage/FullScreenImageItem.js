@@ -1,12 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import client from '../../client'
-import FullScreenLeftDataCard from "./FullScreenLeftDataCard"
+import FullScreenDataCard from "./FullScreenDataCard"
 
 const getImage = async(id) => {
   return await client.fetchImage(id)
 }
 
+const getComments = async(id) => {
+  return await client.fetchImageComments(id)
+}
 
 const imageItem = {
   maxWidth: '100vw',
@@ -40,7 +43,8 @@ class FullScreenImageItem extends React.Component{
         overflowY: 'scroll',
       },
       image: {},
-      dataObject: {}
+      dataObject: {},
+      commentsObject: {},
     }
   }
 
@@ -57,6 +61,13 @@ class FullScreenImageItem extends React.Component{
         })
       })
       .then(() => this.props.setFullScreenImageData(this.state.dataObject))
+
+    getComments(this.props.thisItem)
+      .then(commentsObject => {
+        this.setState({
+          commentsObject: commentsObject
+        })
+      })
   }
 
 
@@ -70,8 +81,10 @@ class FullScreenImageItem extends React.Component{
           />
         </div>
         <div style={dataCardStyle}>
-          <FullScreenLeftDataCard
-            thisItem={this.state.dataObject}
+          <FullScreenDataCard
+            thisItemId={this.props.thisItem}
+            thisDataObject={this.state.dataObject}
+            thisImagesComments={this.state.commentsObject}
             closeFullScreen={this.props.closeFullScreen}
           />
         </div>

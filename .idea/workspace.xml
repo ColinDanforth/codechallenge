@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00abfd83-ca6a-4bf7-97d9-5611ede20f76" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenComments.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/imageDisplay/ImagePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/imageDisplay/ImagePage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenImageItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenImageItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenLeftDataCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenLeftDataCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/imageDisplay/imageCards/ImageItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/imageDisplay/imageCards/ImageItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenLeftDataCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenDataCard.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="85" column="1" lean-forward="true" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="1" />
+            <state relative-caret-position="381">
+              <caret line="65" column="71" selection-start-line="65" selection-start-column="71" selection-end-line="65" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -69,8 +67,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenImageItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+            <state relative-caret-position="1309">
+              <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenDataCard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -79,10 +89,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenLeftDataCard.js">
+        <entry file="file://$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenComments.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+            <state relative-caret-position="320">
+              <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -115,12 +125,15 @@
         <option value="$PROJECT_DIR$/src/components/Header.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/imageDisplay/ImagePage.js" />
-        <option value="$PROJECT_DIR$/src/components/client.js" />
         <option value="$PROJECT_DIR$/src/components/ChallengeHome.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenImageItem.js" />
         <option value="$PROJECT_DIR$/src/components/imageDisplay/imageCards/ImageItem.js" />
         <option value="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenLeftDataCard.js" />
+        <option value="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/CommentsFullScreen.js" />
+        <option value="$PROJECT_DIR$/src/components/client.js" />
+        <option value="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenImageItem.js" />
+        <option value="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenDataCard.js" />
+        <option value="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenComments.js" />
       </list>
     </option>
   </component>
@@ -169,13 +182,6 @@
               <item name="500pxchallenge" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="500pxchallenge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="500pxchallenge" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="imageDisplay" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -228,12 +234,12 @@
       <updated>1543503695185</updated>
       <workItem from="1543503697060" duration="7139000" />
       <workItem from="1543648588716" duration="54000" />
-      <workItem from="1543676169756" duration="36677000" />
+      <workItem from="1543676169756" duration="40609000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43870000" />
+    <option name="totallyTimeSpent" value="47802000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -357,13 +363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="85" column="1" lean-forward="true" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ChallengeHome.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -384,16 +383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenImageItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/imageDisplay/imageCards/ImageItem.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-452">
@@ -404,10 +393,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenLeftDataCard.js">
+    <entry file="file://$PROJECT_DIR$/src/components/client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+        <state relative-caret-position="381">
+          <caret line="65" column="71" selection-start-line="65" selection-start-column="71" selection-end-line="65" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenImageItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenDataCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenComments.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
