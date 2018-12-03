@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import DataCard from "./DataCard"
-import {Redirect} from 'react-router-dom'
 
 const rootCard = {
   display: 'flex',

@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import client from '../../client'
+import FullScreenLeftDataCard from "./FullScreenLeftDataCard"
 
 const getImage = async(id) => {
   return await client.fetchImage(id)
@@ -12,6 +13,15 @@ const imageItem = {
   minHeight: '100vh',
   maxHeight: '100vh',
   width: 'auto',
+}
+
+const dataCardStyle={
+  position: 'absolute',
+  top: '0',
+  left: '0',
+  width: '100%',
+  height: '100vh',
+  overflowY: 'scroll',
 }
 
 class FullScreenImageItem extends React.Component{
@@ -32,8 +42,6 @@ class FullScreenImageItem extends React.Component{
       image: {},
       dataObject: {}
     }
-
-    this.handleCloseFullScreen = this.handleCloseFullScreen.bind(this)
   }
 
   componentDidMount(){
@@ -51,18 +59,22 @@ class FullScreenImageItem extends React.Component{
       .then(() => this.props.setFullScreenImageData(this.state.dataObject))
   }
 
-  handleCloseFullScreen(){
-    this.props.closeFullScreen()
-  }
-
 
   render(){
     return(
-      <div style={this.state.imageDiv} onClick={this.handleCloseFullScreen}>
-        <img style={imageItem}
-             src={this.state.image}
-             alt='image'
-        />
+      <div>
+        <div style={this.state.imageDiv} onClick={this.handleCloseFullScreen}>
+          <img style={imageItem}
+               src={this.state.image}
+               alt='chosenImage'
+          />
+        </div>
+        <div style={dataCardStyle}>
+          <FullScreenLeftDataCard
+            thisItem={this.state.dataObject}
+            closeFullScreen={this.props.closeFullScreen}
+          />
+        </div>
       </div>
     )
   }

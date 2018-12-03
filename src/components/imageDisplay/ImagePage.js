@@ -27,7 +27,7 @@ const centerRootDiv={
 }
 
 const fullscreenBase = {
-  position: 'absolute',
+  position: 'fixed',
   zIndex: '30',
   top: '0',
   left: '0',

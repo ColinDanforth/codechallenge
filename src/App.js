@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import ImagePage from "./components/imageDisplay/ImagePage"
-import {BrowserRouter as Router, Link, Route} from "react-router-dom"
+import {BrowserRouter as Router, NavLink, Route, Redirect} from "react-router-dom"
 import Logo from "./components/500px_logo_detail.png"
-import FullScreenImageItem from "./components/imageDisplay/fullScreenImage/FullScreenImageItem"
 
 const headerStyle={
   position: 'fixed',
@@ -14,7 +13,8 @@ const headerStyle={
   borderBottom: 'outset',
   display: 'flex',
   flexDirection: 'row',
-  justifyContent: 'flex-start'
+  justifyContent: 'flex-start',
+  verticalAlign: 'bottom',
 }
 
 const logoPosition={
@@ -41,7 +41,19 @@ const linkPosition={
 const linkStyle={
   marginLeft: '10px',
   marginRight: '10px',
-  fontSize: '1.8em',
+  fontSize: '1.5em',
+  textDecoration: 'none',
+  color: '#000'
+}
+
+const activeStyle={
+  marginLeft: '10px',
+  marginRight: '10px',
+  marginBottom: 'auto',
+  fontSize: '1.5em',
+  textDecoration: 'none',
+  color: '#000',
+  borderBottom: 'outset',
 }
 
 class App extends Component {
@@ -54,16 +66,17 @@ class App extends Component {
               <img style={logoStyle} src={Logo} alt='logo'/>
             </a>
             <div style={linkPosition}>
-              <Link style={linkStyle} to="/">Popular</Link>
-              <Link style={linkStyle} to="/fresh">Fresh</Link>
-              <Link style={linkStyle} to="/upcoming">UpComing</Link>
-              <Link style={linkStyle} to="/editorschoice">Editor's Choice</Link>
+              <NavLink style={linkStyle} activeStyle={activeStyle} to="/popular">Popular</NavLink>
+              <NavLink style={linkStyle} activeStyle={activeStyle} to="/fresh">Fresh</NavLink>
+              <NavLink style={linkStyle} activeStyle={activeStyle} to="/upcoming">UpComing</NavLink>
+              <NavLink style={linkStyle} activeStyle={activeStyle} to="/editors">Editor's Choice</NavLink>
             </div>
           </div>
-          <Route exact path="/" render={()=><ImagePage stream='popular'/>}/>
+          <Route exact path="/" render={()=><Redirect to="/popular"/>}/>
+          <Route exact path="/popular" render={()=><ImagePage stream='popular'/>}/>
           <Route exact path="/fresh" render={()=><ImagePage stream='fresh'/>}/>
           <Route exact path="/upcoming" render={()=><ImagePage stream='upcoming'/>}/>
-          <Route exact path="/editorschoice" render={()=><ImagePage stream='editorschoice'/>}/>
+          <Route exact path="/editors" render={()=><ImagePage stream='editors'/>}/>
         </div>
       </Router>
     )
