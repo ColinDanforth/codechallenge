@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00abfd83-ca6a-4bf7-97d9-5611ede20f76" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fileTransformer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenUserCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/imageDisplay/imageCommon/CameraDetailsDataCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/imageDisplay/imageCommon/LensDetailsObject.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/imageDisplay/imageCommon/Title.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/components/imageDisplay/imageCommon/CameraDetailsDataCard.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/components/imageDisplay/imageCommon/LensDetailsObject.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/components/imageDisplay/imageCommon/Title.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/components/imageDisplay/imageCommon/UserDataCard.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/500px_logo_detail.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/localImges/500px_logo_detail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/localImges/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/backgroundimage.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/localImges/backgroundimage.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/localImges/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/localImges/close.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/imageDisplay/ImagePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/imageDisplay/ImagePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenComments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenComments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenDataCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenDataCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenImageItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/imageDisplay/fullScreenImage/FullScreenImageItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/imageDisplay/imageCards/DataCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/imageDisplay/imageCommon/UserDataCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/imageDisplay/imageCards/ImageItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/imageDisplay/feedImageCards/ImageItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/like.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/localImges/like.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -67,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
+            <state relative-caret-position="491">
+              <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -283,16 +255,15 @@
       <workItem from="1543503697060" duration="7139000" />
       <workItem from="1543648588716" duration="54000" />
       <workItem from="1543676169756" duration="47322000" />
-      <workItem from="1543938387228" duration="14557000" />
+      <workItem from="1543938387228" duration="14776000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69072000" />
+    <option name="totallyTimeSpent" value="69291000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24383369" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -560,8 +531,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
+        <state relative-caret-position="491">
+          <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
         </state>
       </provider>
     </entry>
