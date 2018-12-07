@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserDataCard should display the appropriate strings 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#FFF",
+      "borderBottom": "inset",
+      "borderLeft": "inset",
+      "borderTop": "inset",
+      "display": "flex",
+      "flexDirection": "row",
+      "height": "auto",
+      "justifyContent": "flex-start",
+    }
+  }
+>
+  <img
+    alt="avatar"
+    src="http://google.ca"
+    style={
+      Object {
+        "height": "auto",
+        "margin": "0.3%",
+        "maxHeight": "100px",
+        "width": "auto",
+      }
+    }
+  />
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "height": "auto",
+        "justifyContent": "space-between",
+        "marginLeft": "10px",
+        "maxWidth": "700px",
+        "minWidth": "700px",
+        "width": "auto",
+      }
+    }
+  >
+    <div>
+      <p
+        style={
+          Object {
+            "height": "auto",
+            "maxWidth": "400px",
+            "minWidth": "400px",
+            "width": "auto",
+          }
+        }
+      >
+        Photographer: 
+        Test User
+      </p>
+      <p
+        style={
+          Object {
+            "height": "auto",
+            "maxWidth": "400px",
+            "minWidth": "400px",
+            "width": "auto",
+          }
+        }
+      >
+        Rating: 
+        99.99999995
+        %
+      </p>
+    </div>
+    <div>
+      <img
+        alt="like"
+        src="test-file-stub"
+        style={
+          Object {
+            "height": "auto",
+            "marginRight": "10px",
+            "marginTop": "5px",
+            "maxWidth": "40px",
+            "width": "auto",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
