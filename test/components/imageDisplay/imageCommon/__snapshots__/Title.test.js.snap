@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title should display input test string 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFF",
+      "border": "inset",
+      "display": "flex",
+      "flexDirection": "Column",
+      "height": "auto",
+      "justifyContent": "center",
+      "minWidth": "600px",
+      "width": "auto",
+    }
+  }
+>
+  <h1>
+    Test String
+  </h1>
+</div>
+`;

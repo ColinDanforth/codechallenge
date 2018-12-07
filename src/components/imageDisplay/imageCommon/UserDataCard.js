@@ -1,18 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import like from '../../like.png'
+import like from '../../localImges/like.png'
 
 const rootDataCardStyle={
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'flex-start',
-  maxWidth: '820px',
-  minWidth: '820px',
+  height: 'auto',
   backgroundColor: '#FFF',
-  margin: '2%',
   borderTop: 'inset',
   borderLeft: 'inset',
-  borderBottom: 'inset',
+  borderBottom: 'inset'
 }
 
 const textBlock = {
@@ -48,15 +46,15 @@ const likeStyle = {
   marginRight: '10px',
 }
 
-class DataCard extends React.Component{
-  render(){
-    return(
+const UserDataCard = (props) =>{
+  if(props.dataObject.hasOwnProperty('user')) {
+    return (
       <div style={rootDataCardStyle}>
-        <img style={imageHeight} src={this.props.dataObject.user.avatars.default.https} alt="avatar"/>
+        <img style={imageHeight} src={props.dataObject.user.avatars.default.https} alt="avatar"/>
         <div style={textBlock}>
           <div>
-            <p style={pStyle}>Photographer: {this.props.dataObject.user.fullname}</p>
-            <p style={pStyle}>Rating: {this.props.dataObject.rating}%</p>
+            <p style={pStyle}>Photographer: {props.dataObject.user.fullname}</p>
+            <p style={pStyle}>Rating: {props.dataObject.rating}%</p>
           </div>
           <div>
             <img style={likeStyle} src={like} alt='like'/>
@@ -64,11 +62,13 @@ class DataCard extends React.Component{
         </div>
       </div>
     )
+  }else{
+    return <div style={{'display': 'none'}}/>
   }
 }
 
-export default DataCard
+export default UserDataCard
 
-DataCard.propTypes={
+UserDataCard.propTypes={
   dataObject: PropTypes.object
 }

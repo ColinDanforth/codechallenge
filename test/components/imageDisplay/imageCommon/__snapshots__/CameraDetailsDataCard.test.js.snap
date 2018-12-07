@@ -1,0 +1,230 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CameraDetailsDataCard should display "Lens Info: no details" 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "RGBA(256,256,256,1)",
+      "border": "inset",
+      "marginTop": "2%",
+    }
+  }
+>
+  <p
+    style={
+      Object {
+        "marginBottom": "15px",
+        "marginLeft": "30px",
+        "marginRight": "30px",
+      }
+    }
+  >
+    Lens Info: No details Submitted
+  </p>
+</div>
+`;
+
+exports[`CameraDetailsDataCard should display LensDetailCard, and appropriate strings 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "RGBA(256,256,256,1)",
+      "border": "inset",
+      "marginTop": "2%",
+    }
+  }
+>
+  <p
+    style={
+      Object {
+        "marginBottom": "15px",
+        "marginLeft": "30px",
+        "marginRight": "30px",
+      }
+    }
+  >
+    Camera: 
+    Olympus M.Zuiko Digital ED 12-40mm f/2.8 PRO
+  </p>
+  <p
+    style={
+      Object {
+        "marginBottom": "15px",
+        "marginLeft": "30px",
+        "marginRight": "30px",
+      }
+    }
+  >
+    Shutter Speed: 
+    test string
+  </p>
+  <p
+    style={
+      Object {
+        "marginBottom": "15px",
+        "marginLeft": "30px",
+        "marginRight": "30px",
+      }
+    }
+  >
+    Aperture: 
+    test string
+  </p>
+  <div>
+    <p
+      style={
+        Object {
+          "marginBottom": "15px",
+          "marginLeft": "30px",
+          "marginRight": "30px",
+        }
+      }
+    >
+      Lens Info:
+    </p>
+    <p
+      style={
+        Object {
+          "marginBottom": "15px",
+          "marginLeft": "60px",
+          "marginRight": "30px",
+        }
+      }
+    >
+      Name: 
+      Olympus M.Zuiko Digital ED 12-40mm f/2.8 PRO
+    </p>
+    <p
+      style={
+        Object {
+          "marginBottom": "15px",
+          "marginLeft": "60px",
+          "marginRight": "30px",
+        }
+      }
+    >
+      Feature: 
+      Micro Four Thirds System
+    </p>
+    <p
+      style={
+        Object {
+          "marginBottom": "15px",
+          "marginLeft": "60px",
+          "marginRight": "30px",
+        }
+      }
+    >
+      24-80mm (35mm Equivalent)
+    </p>
+    <p
+      style={
+        Object {
+          "marginBottom": "15px",
+          "marginLeft": "60px",
+          "marginRight": "30px",
+        }
+      }
+    >
+      Aperture Range: f/2.8 to f/22
+    </p>
+  </div>
+</div>
+`;
+
+exports[`CameraDetailsDataCard should display LensDetailCard, and appropriate strings excluding camera, shutter speed, and aperture 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "RGBA(256,256,256,1)",
+      "border": "inset",
+      "marginTop": "2%",
+    }
+  }
+>
+  <div>
+    <p
+      style={
+        Object {
+          "marginBottom": "15px",
+          "marginLeft": "30px",
+          "marginRight": "30px",
+        }
+      }
+    >
+      Lens Info:
+    </p>
+    <p
+      style={
+        Object {
+          "marginBottom": "15px",
+          "marginLeft": "60px",
+          "marginRight": "30px",
+        }
+      }
+    >
+      Name: 
+      Olympus M.Zuiko Digital ED 12-40mm f/2.8 PRO
+    </p>
+    <p
+      style={
+        Object {
+          "marginBottom": "15px",
+          "marginLeft": "60px",
+          "marginRight": "30px",
+        }
+      }
+    >
+      Feature: 
+      Micro Four Thirds System
+    </p>
+    <p
+      style={
+        Object {
+          "marginBottom": "15px",
+          "marginLeft": "60px",
+          "marginRight": "30px",
+        }
+      }
+    >
+      24-80mm (35mm Equivalent)
+    </p>
+    <p
+      style={
+        Object {
+          "marginBottom": "15px",
+          "marginLeft": "60px",
+          "marginRight": "30px",
+        }
+      }
+    >
+      Aperture Range: f/2.8 to f/22
+    </p>
+  </div>
+</div>
+`;
+
+exports[`CameraDetailsDataCard should display appropriate strings including lens in place of lens info, excluding camera, shutter speed, and aperture 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "RGBA(256,256,256,1)",
+      "border": "inset",
+      "marginTop": "2%",
+    }
+  }
+>
+  <p
+    style={
+      Object {
+        "marginBottom": "15px",
+        "marginLeft": "30px",
+        "marginRight": "30px",
+      }
+    }
+  >
+    Lens: 
+    Olympus M.Zuiko Digital ED 12-40mm f/2.8 PRO
+  </p>
+</div>
+`;

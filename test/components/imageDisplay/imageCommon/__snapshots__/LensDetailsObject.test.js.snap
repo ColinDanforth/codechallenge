@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LensDetailsObject should display an element with the appropriate strings present 1`] = `
+<div>
+  <p
+    style={
+      Object {
+        "marginBottom": "15px",
+        "marginLeft": "30px",
+        "marginRight": "30px",
+      }
+    }
+  >
+    Lens Info:
+  </p>
+  <p
+    style={
+      Object {
+        "marginBottom": "15px",
+        "marginLeft": "60px",
+        "marginRight": "30px",
+      }
+    }
+  >
+    Name: 
+    Olympus M.Zuiko Digital ED 12-40mm f/2.8 PRO
+  </p>
+  <p
+    style={
+      Object {
+        "marginBottom": "15px",
+        "marginLeft": "60px",
+        "marginRight": "30px",
+      }
+    }
+  >
+    Feature: 
+    Micro Four Thirds System
+  </p>
+  <p
+    style={
+      Object {
+        "marginBottom": "15px",
+        "marginLeft": "60px",
+        "marginRight": "30px",
+      }
+    }
+  >
+    24-80mm (35mm Equivalent)
+  </p>
+  <p
+    style={
+      Object {
+        "marginBottom": "15px",
+        "marginLeft": "60px",
+        "marginRight": "30px",
+      }
+    }
+  >
+    Aperture Range: f/2.8 to f/22
+  </p>
+</div>
+`;

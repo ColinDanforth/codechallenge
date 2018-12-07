@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import client from '../../client'
+import client from '../../localImges/client'
 import FullScreenDataCard from "./FullScreenDataCard"
 
 const getImage = async(id) => {
@@ -50,7 +50,7 @@ class FullScreenImageItem extends React.Component{
 
   componentDidMount(){
     const imageData = async() => {
-      return await getImage(this.props.thisItem)
+      return await getImage(this.props.thisItemId)
     }
 
     imageData()
@@ -60,9 +60,8 @@ class FullScreenImageItem extends React.Component{
           dataObject: thisImageData
         })
       })
-      .then(() => this.props.setFullScreenImageData(this.state.dataObject))
 
-    getComments(this.props.thisItem)
+    getComments(this.props.thisItemId)
       .then(commentsObject => {
         this.setState({
           commentsObject: commentsObject
@@ -82,7 +81,8 @@ class FullScreenImageItem extends React.Component{
         </div>
         <div style={dataCardStyle}>
           <FullScreenDataCard
-            thisItemId={this.props.thisItem}
+            thisItemId={this.props.thisItemId}
+            thisItem={this.props.thisItem}
             thisDataObject={this.state.dataObject}
             thisImagesComments={this.state.commentsObject}
             closeFullScreen={this.props.closeFullScreen}
@@ -96,7 +96,7 @@ class FullScreenImageItem extends React.Component{
 export default FullScreenImageItem
 
 FullScreenImageItem.propTypes={
-  thisItem: PropTypes.number,
+  thisItemId: PropTypes.number,
+  thisItem: PropTypes.object,
   closeFullScreen: PropTypes.func,
-  setFullScreenImageData: PropTypes.func,
 }

@@ -4,12 +4,56 @@ import PropTypes from 'prop-types'
 const rootCommentDiv = {
   maxWidth: '500px',
   width: 'auto',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  height: 'auto',
+  marginTop: '3%',
+  marginBottom: '3%',
+  backgroundColor: 'RGBA(256,256,256,0.9)'
 }
 
 const pStyleWrapped = {
   wordWrap: 'normal',
   maxWidth: '500px',
   width: 'auto',
+}
+
+const headerAndDateBlock = {
+  display: 'flex',
+  flexDirection:'row',
+  justifyContent: 'space-between',
+  alignItems: 'flex-start',
+  marginLeft: '1%',
+  marginRight: '1%',
+}
+
+const pDivStyle ={
+  marginLeft: '2%',
+  marginRight: '2%',
+  width: 'auto',
+}
+
+const headerStyleWrapped = {
+  wordWrap: 'normal',
+  maxWidth: '500px',
+  width: 'auto',
+  fontWeight: 'bold',
+}
+
+const commentsTitle = {
+  alignSelf: 'center',
+  fontSize: '1.3em',
+  fontWeight: 'bold',
+}
+
+const commentBlock = {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  margin: '2%',
+  border: 'inset',
+  background: 'RGBA(256,256,256,1)'
 }
 
 class FullScreenComments extends React.Component{
@@ -24,7 +68,6 @@ class FullScreenComments extends React.Component{
       this.props.thisImagesComments.hasOwnProperty('comments')
       && this.state.comments !== this.props.thisImagesComments
     ){
-      console.log('did it')
       this.setState({
         comments: this.props.thisImagesComments
       })
@@ -34,12 +77,18 @@ class FullScreenComments extends React.Component{
   render(){
     return(
       <div style={rootCommentDiv}>
+        <p style={commentsTitle}>User Comments</p>
         {this.state.comments.hasOwnProperty('comments') ?
           (this.state.comments.comments.map((comment, i) => {
             return(
-              <div key={i}>
-                <h3 sstyle={pStyleWrapped}>{comment.user.username}</h3>
-                <p style={pStyleWrapped}>{comment.body}</p>
+              <div style={commentBlock} key={i}>
+                <div style={headerAndDateBlock}>
+                  <p style={headerStyleWrapped}>{comment.user.username}</p>
+                  <p>{comment.created_at}</p>
+                </div>
+                <div style={pDivStyle}>
+                  <p style={pStyleWrapped}>{comment.body}</p>
+                </div>
               </div>
             )
           }))

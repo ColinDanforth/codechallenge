@@ -1,7 +1,7 @@
 import React from 'react'
-import client from '../client'
-import ImageItem from "./imageCards/ImageItem"
-import backgroundImage from '../backgroundimage.jpg'
+import client from '../localImges/client'
+import ImageItem from "./feedImageCards/ImageItem"
+import backgroundImage from '../localImges/backgroundimage.jpg'
 import PropTypes from 'prop-types'
 import FullScreenImageItem from "./fullScreenImage/FullScreenImageItem"
 
@@ -63,18 +63,16 @@ class ImagePage extends React.Component{
         width: 'auto',
         height: 'auto',
       },
-      fullscreenData: {}
     }
 
     this.loadMoreImages = this.loadMoreImages.bind(this)
     this.makeFullScreen = this.makeFullScreen.bind(this)
     this.closeFullScreen = this.closeFullScreen.bind(this)
-    this.setFullScreenImageData = this.setFullScreenImageData.bind(this)
 
     window.onscroll = () => {
       if (
         window.innerHeight + document.documentElement.scrollTop
-        > document.documentElement.offsetHeight - 2000
+        > document.documentElement.offsetHeight - 3000
         && this.state.loading === false
         && this.state.initialLoad === true
       ) {
@@ -90,6 +88,25 @@ class ImagePage extends React.Component{
     this.loadMoreImages()
   }
 
+  componentDidUpdate(nextProps){
+    if(this.props.stream !== nextProps.stream){
+      const setState = async() => {
+        return await this.setState({
+          images: [],
+          page: 1,
+          loading: false,
+          initialLoad: false,
+          fullscreen: false,
+        })
+      }
+
+      setState()
+        .then(() => {
+          this.loadMoreImages()
+        })
+    }
+  }
+
   loadMoreImages(){
     fetchImages(this.props.stream, this.state.page)
       .then(response => {
@@ -103,7 +120,7 @@ class ImagePage extends React.Component{
       })
   }
 
-  makeFullScreen(id){
+  makeFullScreen(id, item){
     var feedStyle = {
       display: this.state.feedStyle.display,
       flexDirection: this.state.feedStyle.flexDirection,
@@ -123,6 +140,7 @@ class ImagePage extends React.Component{
     this.setState({
       fullscreen: true,
       fullscreenId: id,
+      fullscreenItem: item,
       loading: true,
       scrollTop: scrollTop,
       windowHeight: windowHeight,
@@ -147,6 +165,8 @@ class ImagePage extends React.Component{
         fullscreen: false,
         feedStyle: feedStyle,
         loading: false,
+        fullscreenId: '',
+        fullscreenItem: {},
       })
     }
 
@@ -157,12 +177,6 @@ class ImagePage extends React.Component{
       })
   }
 
-  setFullScreenImageData(dataObject){
-    this.setState({
-      fullscreenData: dataObject
-    })
-  }
-
   render(){
     return(
       <div style={centerRootDiv}>
@@ -170,7 +184,8 @@ class ImagePage extends React.Component{
           (
             <div style={fullscreenBase}>
               <FullScreenImageItem
-                thisItem={this.state.fullscreenId}
+                thisItemId={this.state.fullscreenId}
+                thisItem={this.state.fullscreenItem}
                 closeFullScreen={this.closeFullScreen}
                 setFullScreenImageData={this.setFullScreenImageData}
               />

@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import DataCard from "./DataCard"
+import UserDataCard from "../imageCommon/UserDataCard"
+import Title from "../imageCommon/Title"
 
 const rootCard = {
   display: 'flex',
@@ -11,6 +12,22 @@ const rootCard = {
   height: 'auto',
   marginBottom: '1%',
   backgroundColor: '#FFF',
+}
+
+const titleDiv = {
+  maxWidth: '100vw',
+  width: 'auto',
+  marginTop: '2%',
+}
+
+const dataCardPosition = {
+  maxWidth: '820px',
+  minWidth: '820px',
+  maxHeight:'200',
+  minHeight: '100px',
+  width: 'auto',
+  height:'auto',
+  margin: '2%',
 }
 
 const imageWrapper = {
@@ -34,21 +51,27 @@ class ImageItem extends React.Component{
   }
 
   handleClick(){
-    this.props.makeFullScreen(this.props.thisItem.id)
+    this.props.makeFullScreen(this.props.thisItem.id, this.props.thisItem)
   }
 
   render(){
     return(
       <div style={rootCard}>
         {this.props.thisItem.name.length > 0 ?
-          (<h1>{this.props.thisItem.name}</h1>)
+          (
+            <div style={titleDiv}>
+              <Title name={this.props.thisItem.name}/>
+            </div>
+          )
             :
           (<div/>)
         }
         <div style={imageWrapper}>
           <img style={imageObjectStyle} src={this.props.thisItem.image_url} alt="test" onClick={this.handleClick}/>
         </div>
-        <DataCard dataObject={this.props.thisItem}/>
+        <div style={dataCardPosition}>
+          <UserDataCard dataObject={this.props.thisItem}/>
+        </div>
       </div>
     )
   }

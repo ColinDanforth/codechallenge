@@ -1,19 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import close from '../../close.png'
+import close from '../../localImges/close.png'
 import FullScreenComments from "./FullScreenComments"
+import FullScreenUserCard from "./FullScreenUserCard"
 
 const rootDiv={
   position: 'absolute',
   top: '0',
   left: '0',
   marginTop: '100vh',
-  maxHeight: '500px',
-  width: 'auto',
+  maxHeight: '300px',
+  minWidth: '100vw',
+  width: '100wh',
   height: 'auto',
-  backgroundColor: 'RGBA(250,250,250, 0.4)',
+  backgroundColor: 'RGBA(256,256,256, 0.6)',
   overflowY: 'scroll',
   zIndex: '31',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'flex-start',
 }
 
 const xStyle = {
@@ -24,13 +29,18 @@ const xStyle = {
   cursor: 'pointer',
 }
 
+const commentsBlock={
+  flex: '1',
+}
+
 const closeWrapperDiv = {
   position: 'fixed',
   top: '0',
   left: '0',
-  backgroundColor: 'RGBA(250,250,250,0.6)',
+  backgroundColor: 'RGBA(256,256,256,1)',
   height: 'auto',
   width: 'auto',
+  borderRadius: '20%',
 }
 
 class FullScreenDataCard extends React.Component{
@@ -50,7 +60,10 @@ class FullScreenDataCard extends React.Component{
         <div style={closeWrapperDiv}>
           <img src={close} alt="close" style={xStyle} onClick={this.handleCloseFullScreen}/>
         </div>
-        <FullScreenComments thisImagesComments={this.props.thisImagesComments}/>
+        <FullScreenUserCard thisItem={this.props.thisItem} dataObject={this.props.thisDataObject}/>
+        <div style={commentsBlock}>
+          <FullScreenComments thisImagesComments={this.props.thisImagesComments}/>
+        </div>
       </div>
     )
   }
@@ -60,6 +73,7 @@ export default FullScreenDataCard
 
 FullScreenDataCard.propTypes= {
   thisItemId: PropTypes.number,
+  thisItem: PropTypes.object,
   thisDataObject: PropTypes.object,
   thisImagesComments: PropTypes.object,
   closeFullScreen: PropTypes.func,

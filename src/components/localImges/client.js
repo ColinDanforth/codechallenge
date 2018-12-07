@@ -1,4 +1,4 @@
-import key from '../consumer'
+import key from '../../consumer'
 
 const fetchFeed = async(stream, currentPage) => {
   return await fetch(`https://api.500px.com/v1/photos?feature=${stream}&image_size=5&page=${currentPage}&consumer_key=${key.key}`,

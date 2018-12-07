@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ImagePage from "./components/imageDisplay/ImagePage"
 import {BrowserRouter as Router, NavLink, Route, Redirect} from "react-router-dom"
-import Logo from "./components/500px_logo_detail.png"
+import Logo from "./components/localImges/500px_logo_detail.png"
 
 const headerStyle={
   position: 'fixed',
@@ -41,15 +41,18 @@ const linkPosition={
 const linkStyle={
   marginLeft: '10px',
   marginRight: '10px',
+  marginBottom: '2px',
+  marginTop: 'auto',
   fontSize: '1.5em',
   textDecoration: 'none',
-  color: '#000'
+  color: '#000',
 }
 
 const activeStyle={
   marginLeft: '10px',
   marginRight: '10px',
-  marginBottom: 'auto',
+  marginBottom: '2px',
+  marginTop: 'auto',
   fontSize: '1.5em',
   textDecoration: 'none',
   color: '#000',
@@ -58,6 +61,11 @@ const activeStyle={
 
 class App extends Component {
   render() {
+    const redirectedPage = ({match}) => {
+      console.log(match.params.id)
+      return <ImagePage stream={match.params.id}/>
+    }
+
     return (
       <Router>
         <div>
@@ -73,10 +81,7 @@ class App extends Component {
             </div>
           </div>
           <Route exact path="/" render={()=><Redirect to="/popular"/>}/>
-          <Route exact path="/popular" render={()=><ImagePage stream='popular'/>}/>
-          <Route exact path="/fresh" render={()=><ImagePage stream='fresh'/>}/>
-          <Route exact path="/upcoming" render={()=><ImagePage stream='upcoming'/>}/>
-          <Route exact path="/editors" render={()=><ImagePage stream='editors'/>}/>
+          <Route path="/:id" component={redirectedPage}/>
         </div>
       </Router>
     )
