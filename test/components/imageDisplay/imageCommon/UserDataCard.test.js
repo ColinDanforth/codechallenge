@@ -1,5 +1,5 @@
 import React from 'react';
-import UserDataCard from '../../../../src/components/imageDisplay/imageCommon/UserDataCard';
+import UserDataCard from '../../../../src/components/imageCommon/UserDataCard';
 import renderer from 'react-test-renderer';
 
 test('UserDataCard should display the appropriate strings', () => {

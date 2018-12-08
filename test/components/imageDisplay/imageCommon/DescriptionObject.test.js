@@ -1,5 +1,5 @@
 import React from 'react';
-import DescriptionObject from '../../../../src/components/imageDisplay/imageCommon/DescriptionObject';
+import DescriptionObject from '../../../../src/components/imageCommon/DescriptionObject';
 import renderer from 'react-test-renderer';
 
 test('Description should display test string', () => {

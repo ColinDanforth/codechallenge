@@ -1,5 +1,5 @@
 import React from 'react';
-import LensDetailsObject from '../../../../src/components/imageDisplay/imageCommon/LensDetailsObject';
+import LensDetailsObject from '../../../../src/components/imageCommon/LensDetailsObject';
 import renderer from 'react-test-renderer';
 
 test('LensDetailsObject should display an element with the appropriate strings present', () => {

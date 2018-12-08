@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import like from '../../localImges/like.png'
+import like from '../../localImages/like.png'
 
 const rootDataCardStyle={
   display: 'flex',

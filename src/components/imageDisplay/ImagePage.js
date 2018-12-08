@@ -1,7 +1,7 @@
 import React from 'react'
 import client from '../client'
 import ImageItem from "./feedImageCards/ImageItem"
-import backgroundImage from '../localImges/backgroundimage.jpg'
+import backgroundImage from '../../localImages/backgroundimage.jpg'
 import PropTypes from 'prop-types'
 import FullScreenImageItem from "./fullScreenImage/FullScreenImageItem"
 
@@ -69,6 +69,7 @@ class ImagePage extends React.Component{
     this.loadMoreImages = this.loadMoreImages.bind(this)
     this.makeFullScreen = this.makeFullScreen.bind(this)
     this.closeFullScreen = this.closeFullScreen.bind(this)
+    this.loadImageFeed = this.loadImageFeed.bind(this)
 
     window.onscroll = () => {
       if (
@@ -111,9 +112,10 @@ class ImagePage extends React.Component{
   loadMoreImages(){
     fetchImages(this.props.stream, this.state.page)
       .then(response => {
+        console.log(JSON.stringify(response))
         const page = this.state.page + 1
         this.setState({
-          images: this.state.images.concat([response]),
+          images: this.state.images.concat(response),
           page:  page,
           loading: false,
           initialLoad: true,
@@ -178,6 +180,18 @@ class ImagePage extends React.Component{
       })
   }
 
+  loadImageFeed() {
+    if (this.state.images.length > 0) {
+      return (
+        <div style={this.state.feedStyle}>
+          {this.state.images.map((thisImageSet, j) => thisImageSet.photos.map((object, i) => <ImageItem key={j+i} thisItem={object} makeFullScreen={this.makeFullScreen}/>))}
+        </div>
+      )
+    } else{
+      return <div style={{'display': 'none'}}/>
+    }
+  }
+
   render(){
     return(
       <div style={centerRootDiv}>
@@ -196,16 +210,7 @@ class ImagePage extends React.Component{
           (<div style={{'display': 'none'}}/>)
         }
         <div style={background}/>
-        {this.state.images.length > 0 ?
-          (
-            <div style={this.state.feedStyle}>
-              {this.state.images.map((imagePages, i) => {
-                return imagePages.photos.map((object, i) => <ImageItem key={i} thisItem={object} makeFullScreen={this.makeFullScreen}/>)})}
-            </div>
-          )
-          :
-          (<div style={{'display': 'none'}}/>)
-        }
+        {this.loadImageFeed()}
       </div>
     )
   }

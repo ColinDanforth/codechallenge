@@ -1,5 +1,5 @@
 import React from 'react';
-import Title from '../../../../src/components/imageDisplay/imageCommon/Title';
+import Title from '../../../../src/components/imageCommon/Title';
 import renderer from 'react-test-renderer';
 
 test('Title should display input test string, and description block with the same text', () => {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ImagePage from "./components/imageDisplay/ImagePage"
 import {BrowserRouter as Router, NavLink, Route, Redirect} from "react-router-dom"
-import Logo from "./components/localImges/500px_logo_detail.png"
+import Logo from "./localImages/500px_logo_detail.png"
 
 const headerStyle={
   position: 'fixed',

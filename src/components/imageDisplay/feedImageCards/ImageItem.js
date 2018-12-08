@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import UserDataCard from "../imageCommon/UserDataCard"
-import Title from "../imageCommon/Title"
+import UserDataCard from "../../imageCommon/UserDataCard"
+import Title from "../../imageCommon/Title"
 
 const rootCard = {
   display: 'flex',

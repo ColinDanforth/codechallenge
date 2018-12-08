@@ -1,5 +1,5 @@
 import React from 'react';
-import CameraDetailsDataCard from '../../../../src/components/imageDisplay/imageCommon/CameraDetailsDataCard';
+import CameraDetailsDataCard from '../../../../src/components/imageCommon/CameraDetailsDataCard';
 import renderer from 'react-test-renderer';
 
 test('CameraDetailsDataCard should display LensDetailCard, and appropriate strings', () => {

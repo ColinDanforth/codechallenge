@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import close from '../../localImges/close.png'
+import close from '../../../localImages/close.png'
 import FullScreenComments from "./FullScreenComments"
 import FullScreenUserCard from "./FullScreenUserCard"
 
@@ -26,8 +26,7 @@ const xStyle = {
   minWidth: '35px',
   width: 'auto',
   height: 'auto',
-  cursor: 'pointer',
-  zIndex: '40'
+  zIndex: '52'
 }
 
 const commentsBlock={
@@ -36,13 +35,14 @@ const commentsBlock={
 
 const closeWrapperDiv = {
   position: 'fixed',
-  top: '0',
-  left: '0',
-  backgroundColor: 'RGBA(150,150,150,0.6)',
+  top: '3px',
+  left: '3px',
+  backgroundColor: 'RGB(150,150,150)',
   height: 'auto',
   width: 'auto',
   borderRadius: '20%',
-  zIndex: '40',
+  cursor: 'pointer',
+  zIndex: '50',
 }
 
 class FullScreenDataCard extends React.Component{
@@ -59,8 +59,8 @@ class FullScreenDataCard extends React.Component{
   render(){
     return(
       <div style={rootDiv}>
-        <div style={closeWrapperDiv}>
-          <img src={close} alt="close" style={xStyle} onClick={this.handleCloseFullScreen}/>
+        <div style={closeWrapperDiv} onClick={this.handleCloseFullScreen}>
+          <img src={close} alt="close" style={xStyle}/>
         </div>
           <FullScreenUserCard thisItem={this.props.thisItem} dataObject={this.props.thisDataObject}/>
         <div style={commentsBlock}>
