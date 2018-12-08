@@ -12,6 +12,7 @@ const background = {
   left: '0px',
   width: '100%',
   height: '100%',
+  overflowX: 'scroll',
   backgroundImage: `url(${backgroundImage})`,
   backgroundPosition: 'center',
   backgroundSize: 'cover',
