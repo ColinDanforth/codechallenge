@@ -47,3 +47,36 @@ test('FullScreenUserCard should display the below data object in FullScreenUserC
     expect(tree).toMatchSnapshot()
 
   })
+
+test('FullScreenUserCard should display the below data object in FullScreenUserCard, and Title elements, comments should' +
+  'show message "No comments yet, be the first to comment on this Great Image!"', () => {
+    const testDataObject={
+      name: 'test name',
+      user: {
+        avatars: {
+          default: {
+            https: 'http://google.ca'
+          }
+        },
+        fullname: 'Test User',
+
+      },
+      rating: '99.99999995',
+      lens_info: {
+        friendly_name: "Olympus M.Zuiko Digital ED 12-40mm f/2.8 PRO",
+        features: "Micro Four Thirds System<br/>24-80mm (35mm Equivalent)<br/>Aperture Range: f/2.8 to f/22",
+      },
+      camera: "Olympus M.Zuiko Digital ED 12-40mm f/2.8 PRO",
+      shutter_speed: 'test string',
+      aperture: 'test string',
+      description: 'test description',
+    }
+
+    const component = renderer.create(
+      <FullScreenDataCard thisDataObject={testDataObject} thisImagesComments={testDataObject} thisItem={testDataObject}/>
+    )
+
+    let tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+
+  })
