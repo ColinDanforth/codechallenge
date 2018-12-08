@@ -59,6 +59,7 @@ const activeStyle={
   borderBottom: 'outset',
 }
 
+
 class App extends Component {
   render() {
     const redirectedPage = ({match}) => {
@@ -79,8 +80,8 @@ class App extends Component {
               <NavLink style={linkStyle} activeStyle={activeStyle} to="/editors">Editor's Choice</NavLink>
             </div>
           </div>
-          <Route exact path="/" render={()=><Redirect to="/popular"/>}/>
-          <Route path="/:id" component={redirectedPage}/>
+            <Route exact path="/" render={()=><Redirect to="/popular"/>}/>
+            <Route path="/:id" component={redirectedPage}/>
         </div>
       </Router>
     )

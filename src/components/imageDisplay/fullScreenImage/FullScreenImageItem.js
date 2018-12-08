@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import client from '../../localImges/client'
+import client from '../../client'
 import FullScreenDataCard from "./FullScreenDataCard"
 
 const getImage = async(id) => {
@@ -13,9 +13,9 @@ const getComments = async(id) => {
 
 const imageItem = {
   maxWidth: '100vw',
-  minHeight: '100vh',
   maxHeight: '100vh',
   width: 'auto',
+  height: 'auto',
 }
 
 const dataCardStyle={
@@ -36,11 +36,9 @@ class FullScreenImageItem extends React.Component{
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        maxWidth: '100%',
-        height: 'auto',
-        width: 'auto',
+        height: '100vh',
+        width: '100vw',
         cursor: 'pointer',
-        overflowY: 'scroll',
       },
       image: {},
       dataObject: {},

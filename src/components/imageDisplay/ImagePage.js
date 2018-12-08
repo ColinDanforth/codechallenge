@@ -1,5 +1,5 @@
 import React from 'react'
-import client from '../localImges/client'
+import client from '../client'
 import ImageItem from "./feedImageCards/ImageItem"
 import backgroundImage from '../localImges/backgroundimage.jpg'
 import PropTypes from 'prop-types'
@@ -12,7 +12,6 @@ const background = {
   left: '0px',
   width: '100%',
   height: '100%',
-  overflowX: 'scroll',
   backgroundImage: `url(${backgroundImage})`,
   backgroundPosition: 'center',
   backgroundSize: 'cover',
@@ -22,6 +21,7 @@ const background = {
 const centerRootDiv={
   display: 'flex',
   justifyContent: 'center',
+  alignItems: 'center',
   width: '100%',
   height: 'auto',
   marginTop: '50px',

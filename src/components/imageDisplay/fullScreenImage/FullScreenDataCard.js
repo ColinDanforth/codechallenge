@@ -27,6 +27,7 @@ const xStyle = {
   width: 'auto',
   height: 'auto',
   cursor: 'pointer',
+  zIndex: '40'
 }
 
 const commentsBlock={
@@ -41,6 +42,7 @@ const closeWrapperDiv = {
   height: 'auto',
   width: 'auto',
   borderRadius: '20%',
+  zIndex: '40',
 }
 
 class FullScreenDataCard extends React.Component{
