@@ -8,9 +8,10 @@ const userCardBackground={
 }
 
 const textStyle={
-  marginLeft: '30px',
-  marginRight: '30px',
-  marginBottom: '15px',
+  marginTop: '1%',
+  marginLeft: '2%',
+  marginRight: '2%',
+  marginBottom: '1%',
 }
 
 const isThereLensInfo = (data) => {

@@ -180,9 +180,10 @@ exports[`FullScreenUserCard should display a group of comment elements showing t
       <p
         style={
           Object {
-            "marginBottom": "15px",
-            "marginLeft": "30px",
-            "marginRight": "30px",
+            "marginBottom": "1%",
+            "marginLeft": "2%",
+            "marginRight": "2%",
+            "marginTop": "1%",
           }
         }
       >
@@ -192,9 +193,10 @@ exports[`FullScreenUserCard should display a group of comment elements showing t
       <p
         style={
           Object {
-            "marginBottom": "15px",
-            "marginLeft": "30px",
-            "marginRight": "30px",
+            "marginBottom": "1%",
+            "marginLeft": "2%",
+            "marginRight": "2%",
+            "marginTop": "1%",
           }
         }
       >
@@ -204,9 +206,10 @@ exports[`FullScreenUserCard should display a group of comment elements showing t
       <p
         style={
           Object {
-            "marginBottom": "15px",
-            "marginLeft": "30px",
-            "marginRight": "30px",
+            "marginBottom": "1%",
+            "marginLeft": "2%",
+            "marginRight": "2%",
+            "marginTop": "1%",
           }
         }
       >

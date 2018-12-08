@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FullScreenUserCard should display a group of comment elements showing the appropriate text from the testData object 1`] = `
+exports[`FullScreenUserCard should display the below data object in FullScreenUserCard, FulScreenComments and Title elements 1`] = `
 <div
   style={
     Object {
@@ -24,7 +24,7 @@ exports[`FullScreenUserCard should display a group of comment elements showing t
   <div
     style={
       Object {
-        "backgroundColor": "RGB(256,256,256)",
+        "backgroundColor": "RGBA(150,150,150,0.6)",
         "borderRadius": "20%",
         "height": "auto",
         "left": "0",
@@ -228,9 +228,10 @@ exports[`FullScreenUserCard should display a group of comment elements showing t
         <p
           style={
             Object {
-              "marginBottom": "15px",
-              "marginLeft": "30px",
-              "marginRight": "30px",
+              "marginBottom": "1%",
+              "marginLeft": "2%",
+              "marginRight": "2%",
+              "marginTop": "1%",
             }
           }
         >
@@ -240,9 +241,10 @@ exports[`FullScreenUserCard should display a group of comment elements showing t
         <p
           style={
             Object {
-              "marginBottom": "15px",
-              "marginLeft": "30px",
-              "marginRight": "30px",
+              "marginBottom": "1%",
+              "marginLeft": "2%",
+              "marginRight": "2%",
+              "marginTop": "1%",
             }
           }
         >
@@ -252,9 +254,10 @@ exports[`FullScreenUserCard should display a group of comment elements showing t
         <p
           style={
             Object {
-              "marginBottom": "15px",
-              "marginLeft": "30px",
-              "marginRight": "30px",
+              "marginBottom": "1%",
+              "marginLeft": "2%",
+              "marginRight": "2%",
+              "marginTop": "1%",
             }
           }
         >

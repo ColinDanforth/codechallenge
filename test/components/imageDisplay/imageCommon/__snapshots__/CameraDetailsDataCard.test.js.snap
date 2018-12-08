@@ -13,9 +13,10 @@ exports[`CameraDetailsDataCard should display "Lens Info: no details" 1`] = `
   <p
     style={
       Object {
-        "marginBottom": "15px",
-        "marginLeft": "30px",
-        "marginRight": "30px",
+        "marginBottom": "1%",
+        "marginLeft": "2%",
+        "marginRight": "2%",
+        "marginTop": "1%",
       }
     }
   >
@@ -37,9 +38,10 @@ exports[`CameraDetailsDataCard should display LensDetailCard, and appropriate st
   <p
     style={
       Object {
-        "marginBottom": "15px",
-        "marginLeft": "30px",
-        "marginRight": "30px",
+        "marginBottom": "1%",
+        "marginLeft": "2%",
+        "marginRight": "2%",
+        "marginTop": "1%",
       }
     }
   >
@@ -49,9 +51,10 @@ exports[`CameraDetailsDataCard should display LensDetailCard, and appropriate st
   <p
     style={
       Object {
-        "marginBottom": "15px",
-        "marginLeft": "30px",
-        "marginRight": "30px",
+        "marginBottom": "1%",
+        "marginLeft": "2%",
+        "marginRight": "2%",
+        "marginTop": "1%",
       }
     }
   >
@@ -61,9 +64,10 @@ exports[`CameraDetailsDataCard should display LensDetailCard, and appropriate st
   <p
     style={
       Object {
-        "marginBottom": "15px",
-        "marginLeft": "30px",
-        "marginRight": "30px",
+        "marginBottom": "1%",
+        "marginLeft": "2%",
+        "marginRight": "2%",
+        "marginTop": "1%",
       }
     }
   >
@@ -217,9 +221,10 @@ exports[`CameraDetailsDataCard should display appropriate strings including lens
   <p
     style={
       Object {
-        "marginBottom": "15px",
-        "marginLeft": "30px",
-        "marginRight": "30px",
+        "marginBottom": "1%",
+        "marginLeft": "2%",
+        "marginRight": "2%",
+        "marginTop": "1%",
       }
     }
   >

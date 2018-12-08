@@ -81,7 +81,6 @@ class FullScreenImageItem extends React.Component{
         </div>
         <div style={dataCardStyle}>
           <FullScreenDataCard
-            thisItemId={this.props.thisItemId}
             thisItem={this.props.thisItem}
             thisDataObject={this.state.dataObject}
             thisImagesComments={this.state.commentsObject}

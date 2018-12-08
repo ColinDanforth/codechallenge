@@ -37,7 +37,7 @@ const closeWrapperDiv = {
   position: 'fixed',
   top: '0',
   left: '0',
-  backgroundColor: 'RGB(256,256,256)',
+  backgroundColor: 'RGBA(150,150,150,0.6)',
   height: 'auto',
   width: 'auto',
   borderRadius: '20%',
@@ -72,7 +72,6 @@ class FullScreenDataCard extends React.Component{
 export default FullScreenDataCard
 
 FullScreenDataCard.propTypes= {
-  thisItemId: PropTypes.number,
   thisItem: PropTypes.object,
   thisDataObject: PropTypes.object,
   thisImagesComments: PropTypes.object,
