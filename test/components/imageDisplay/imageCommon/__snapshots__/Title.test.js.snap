@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Title should display input test string 1`] = `
+exports[`Title should display input test string, and a div in place of description with style of display none 1`] = `
 <div
   style={
     Object {
@@ -19,5 +19,79 @@ exports[`Title should display input test string 1`] = `
   <h1>
     Test String
   </h1>
+  <div
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Title should display input test string, and description block with the same text 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFF",
+      "border": "inset",
+      "display": "flex",
+      "flexDirection": "Column",
+      "height": "auto",
+      "justifyContent": "center",
+      "minWidth": "600px",
+      "width": "auto",
+    }
+  }
+>
+  <h1>
+    Test String
+  </h1>
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "Test String",
+      }
+    }
+    style={
+      Object {
+        "height": "auto",
+        "margin": "3%",
+        "maxWidth": "820px",
+        "minWidth": "600px",
+        "width": "auto",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Title should display untitled, and a div in place of description with style of display none 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFF",
+      "border": "inset",
+      "display": "flex",
+      "flexDirection": "Column",
+      "height": "auto",
+      "justifyContent": "center",
+      "minWidth": "600px",
+      "width": "auto",
+    }
+  }
+>
+  <h1>
+    untitled
+  </h1>
+  <div
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  />
 </div>
 `;

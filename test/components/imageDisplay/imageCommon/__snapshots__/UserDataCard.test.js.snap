@@ -5,13 +5,13 @@ exports[`UserDataCard should display the appropriate strings 1`] = `
   style={
     Object {
       "backgroundColor": "#FFF",
-      "borderBottom": "inset",
-      "borderLeft": "inset",
-      "borderTop": "inset",
+      "border": "inset",
       "display": "flex",
       "flexDirection": "row",
       "height": "auto",
       "justifyContent": "flex-start",
+      "maxWidth": "820px",
+      "minWidth": "820px",
     }
   }
 >

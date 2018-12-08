@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Description should display as a div with a style of display none 1`] = `
+<div
+  style={
+    Object {
+      "display": "none",
+    }
+  }
+/>
+`;
+
+exports[`Description should display test string 1`] = `
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "Test String",
+    }
+  }
+  style={
+    Object {
+      "height": "auto",
+      "margin": "3%",
+      "maxWidth": "820px",
+      "minWidth": "600px",
+      "width": "auto",
+    }
+  }
+/>
+`;
+
+exports[`Description should display test string with <a> element 1`] = `
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "Test String <a src='http://google.com'/> ",
+    }
+  }
+  style={
+    Object {
+      "height": "auto",
+      "margin": "3%",
+      "maxWidth": "820px",
+      "minWidth": "600px",
+      "width": "auto",
+    }
+  }
+/>
+`;

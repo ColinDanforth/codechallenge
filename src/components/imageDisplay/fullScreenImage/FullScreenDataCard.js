@@ -55,6 +55,7 @@ class FullScreenDataCard extends React.Component{
   }
 
   render(){
+    console.log(JSON.stringify(this.props.thisImagesComments))
     return(
       <div style={rootDiv}>
         <div style={closeWrapperDiv}>

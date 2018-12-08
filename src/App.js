@@ -62,7 +62,6 @@ const activeStyle={
 class App extends Component {
   render() {
     const redirectedPage = ({match}) => {
-      console.log(match.params.id)
       return <ImagePage stream={match.params.id}/>
     }
 

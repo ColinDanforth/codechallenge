@@ -6,11 +6,11 @@ const rootDataCardStyle={
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'flex-start',
+  maxWidth: '820px',
+  minWidth: '820px',
   height: 'auto',
   backgroundColor: '#FFF',
-  borderTop: 'inset',
-  borderLeft: 'inset',
-  borderBottom: 'inset'
+  border: 'inset',
 }
 
 const textBlock = {

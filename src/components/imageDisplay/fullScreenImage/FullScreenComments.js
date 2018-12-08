@@ -10,7 +10,8 @@ const rootCommentDiv = {
   height: 'auto',
   marginTop: '3%',
   marginBottom: '3%',
-  backgroundColor: 'RGBA(256,256,256,0.9)'
+  backgroundColor: 'RGBA(256,256,256,0.9)',
+  border: 'inset'
 }
 
 const pStyleWrapped = {
@@ -52,8 +53,13 @@ const commentBlock = {
   flexDirection: 'column',
   justifyContent: 'center',
   margin: '2%',
-  border: 'inset',
+  border: 'outset',
   background: 'RGBA(256,256,256,1)'
+}
+
+const noCommentsMessage={
+  margin: '3%',
+  alignSelf: 'center',
 }
 
 class FullScreenComments extends React.Component{
@@ -62,7 +68,10 @@ class FullScreenComments extends React.Component{
     this.state={
       comments: {},
     }
+
+    this.commentsBlock = this.commentsBlock.bind(this)
   }
+
   componentDidUpdate(){
     if(
       this.props.thisImagesComments.hasOwnProperty('comments')
@@ -74,27 +83,31 @@ class FullScreenComments extends React.Component{
     }
   }
 
+  commentsBlock(){
+    if(this.state.comments.hasOwnProperty('comments') && this.state.comments.comments.length > 0) {
+      return (this.state.comments.comments.map((comment, i) => {
+        return (
+          <div style={commentBlock} key={i}>
+            <div style={headerAndDateBlock}>
+              <p style={headerStyleWrapped}>{comment.user.username}</p>
+              <p>{comment.created_at}</p>
+            </div>
+            <div style={pDivStyle}>
+              <p style={pStyleWrapped}>{comment.body}</p>
+            </div>
+          </div>
+        )
+      }))
+    } else {
+      return <p style={noCommentsMessage}>No comments yet, be the first to comment on this Great Image!</p>
+    }
+  }
+
   render(){
     return(
       <div style={rootCommentDiv}>
         <p style={commentsTitle}>User Comments</p>
-        {this.state.comments.hasOwnProperty('comments') ?
-          (this.state.comments.comments.map((comment, i) => {
-            return(
-              <div style={commentBlock} key={i}>
-                <div style={headerAndDateBlock}>
-                  <p style={headerStyleWrapped}>{comment.user.username}</p>
-                  <p>{comment.created_at}</p>
-                </div>
-                <div style={pDivStyle}>
-                  <p style={pStyleWrapped}>{comment.body}</p>
-                </div>
-              </div>
-            )
-          }))
-          :
-          (<div style={{'display': 'none'}}/>)
-        }
+        {this.commentsBlock()}
       </div>
     )
   }

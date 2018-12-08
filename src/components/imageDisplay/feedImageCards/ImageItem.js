@@ -60,7 +60,10 @@ class ImageItem extends React.Component{
         {this.props.thisItem.name.length > 0 ?
           (
             <div style={titleDiv}>
-              <Title name={this.props.thisItem.name}/>
+              <Title
+                name={this.props.thisItem.name}
+                description=''
+              />
             </div>
           )
             :
