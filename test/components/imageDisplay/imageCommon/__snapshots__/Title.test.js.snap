@@ -6,7 +6,7 @@ exports[`Title should display input test string, and a div in place of descripti
     Object {
       "alignItems": "center",
       "backgroundColor": "#FFF",
-      "border": "inset",
+      "borderBottom": "inset",
       "display": "flex",
       "flexDirection": "Column",
       "height": "auto",
@@ -35,7 +35,7 @@ exports[`Title should display input test string, and description block with the 
     Object {
       "alignItems": "center",
       "backgroundColor": "#FFF",
-      "border": "inset",
+      "borderBottom": "inset",
       "display": "flex",
       "flexDirection": "Column",
       "height": "auto",
@@ -73,7 +73,7 @@ exports[`Title should display untitled, and a div in place of description with s
     Object {
       "alignItems": "center",
       "backgroundColor": "#FFF",
-      "border": "inset",
+      "borderBottom": "inset",
       "display": "flex",
       "flexDirection": "Column",
       "height": "auto",

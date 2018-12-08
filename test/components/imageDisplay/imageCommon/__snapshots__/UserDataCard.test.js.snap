@@ -5,7 +5,8 @@ exports[`UserDataCard should display the appropriate strings 1`] = `
   style={
     Object {
       "backgroundColor": "#FFF",
-      "border": "inset",
+      "borderBottom": "inset",
+      "borderRight": "inset",
       "display": "flex",
       "flexDirection": "row",
       "height": "auto",

@@ -13,7 +13,7 @@ const rootDiv={
   minWidth: '100vw',
   width: '100wh',
   height: 'auto',
-  backgroundColor: 'RGBA(256,256,256, 0.6)',
+  backgroundColor: 'RGBA(0,0,0,0.5)',
   overflowY: 'scroll',
   zIndex: '31',
   display: 'flex',
@@ -37,7 +37,7 @@ const closeWrapperDiv = {
   position: 'fixed',
   top: '0',
   left: '0',
-  backgroundColor: 'RGBA(256,256,256,1)',
+  backgroundColor: 'RGB(256,256,256)',
   height: 'auto',
   width: 'auto',
   borderRadius: '20%',
@@ -55,13 +55,12 @@ class FullScreenDataCard extends React.Component{
   }
 
   render(){
-    console.log(JSON.stringify(this.props.thisImagesComments))
     return(
       <div style={rootDiv}>
         <div style={closeWrapperDiv}>
           <img src={close} alt="close" style={xStyle} onClick={this.handleCloseFullScreen}/>
         </div>
-        <FullScreenUserCard thisItem={this.props.thisItem} dataObject={this.props.thisDataObject}/>
+          <FullScreenUserCard thisItem={this.props.thisItem} dataObject={this.props.thisDataObject}/>
         <div style={commentsBlock}>
           <FullScreenComments thisImagesComments={this.props.thisImagesComments}/>
         </div>

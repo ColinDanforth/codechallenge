@@ -2,6 +2,22 @@ Code Challenge:
 
 This repo has been configured to host the code challenge as requested by 500px.
 
+To setup the project clone the repo to your local machine and run the below commands from the root project
+directory in your console.
+
+```
+npm install
+```
+
+or 
+
+```
+yarn
+```
+
+I will supply a file separately with the appropriate consumer key. Please store the consumer.js file a
+in the src folder.
+
 In order to launch the development build please run the following command from the root project directory 
 in your console.
 

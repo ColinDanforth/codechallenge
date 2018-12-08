@@ -4,7 +4,7 @@ import LensDetailsObject from "./LensDetailsObject"
 const userCardBackground={
   marginTop: '2%',
   backgroundColor: 'RGBA(256,256,256,1)',
-  border:'inset',
+  borderBottom:'inset',
 }
 
 const textStyle={

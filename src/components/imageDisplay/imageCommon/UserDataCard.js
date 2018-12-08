@@ -10,7 +10,8 @@ const rootDataCardStyle={
   minWidth: '820px',
   height: 'auto',
   backgroundColor: '#FFF',
-  border: 'inset',
+  borderBottom: 'inset',
+  borderRight: 'inset',
 }
 
 const textBlock = {

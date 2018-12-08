@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FullScreenComments should display a group of comment elements showing the appropriate text from the testData object 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "RGB(256,256,256)",
+      "borderBottom": "inset",
+      "display": "flex",
+      "flexDirection": "column",
+      "height": "auto",
+      "justifyContent": "center",
+      "marginBottom": "3%",
+      "marginTop": "3%",
+      "maxWidth": "500px",
+      "width": "auto",
+    }
+  }
+>
+  <p
+    style={
+      Object {
+        "alignSelf": "center",
+        "fontSize": "1.3em",
+        "fontWeight": "bold",
+      }
+    }
+  >
+    User Comments
+  </p>
+  <div
+    style={
+      Object {
+        "background": "RGBA(256,256,256,1)",
+        "border": "outset",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "margin": "0.5%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginLeft": "1%",
+          "marginRight": "1%",
+        }
+      }
+    >
+      <p
+        style={
+          Object {
+            "fontWeight": "bold",
+            "maxWidth": "500px",
+            "width": "auto",
+            "wordWrap": "normal",
+          }
+        }
+      >
+        TestUser
+      </p>
+      <p>
+        2018-01-01
+      </p>
+    </div>
+    <div
+      style={
+        Object {
+          "marginLeft": "2%",
+          "marginRight": "2%",
+          "width": "auto",
+        }
+      }
+    >
+      <p
+        style={
+          Object {
+            "maxWidth": "500px",
+            "width": "auto",
+            "wordWrap": "normal",
+          }
+        }
+      >
+        Some Comment String
+      </p>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "background": "RGBA(256,256,256,1)",
+        "border": "outset",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "margin": "0.5%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginLeft": "1%",
+          "marginRight": "1%",
+        }
+      }
+    >
+      <p
+        style={
+          Object {
+            "fontWeight": "bold",
+            "maxWidth": "500px",
+            "width": "auto",
+            "wordWrap": "normal",
+          }
+        }
+      >
+        TestUser2
+      </p>
+      <p>
+        2018-01-02
+      </p>
+    </div>
+    <div
+      style={
+        Object {
+          "marginLeft": "2%",
+          "marginRight": "2%",
+          "width": "auto",
+        }
+      }
+    >
+      <p
+        style={
+          Object {
+            "maxWidth": "500px",
+            "width": "auto",
+            "wordWrap": "normal",
+          }
+        }
+      >
+        Some Comment String 2
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FullScreenComments should show comment object with a string "No comments yet, be the first to comment on this Great Image!", empty comments array 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "RGB(256,256,256)",
+      "borderBottom": "inset",
+      "display": "flex",
+      "flexDirection": "column",
+      "height": "auto",
+      "justifyContent": "center",
+      "marginBottom": "3%",
+      "marginTop": "3%",
+      "maxWidth": "500px",
+      "width": "auto",
+    }
+  }
+>
+  <p
+    style={
+      Object {
+        "alignSelf": "center",
+        "fontSize": "1.3em",
+        "fontWeight": "bold",
+      }
+    }
+  >
+    User Comments
+  </p>
+  <p
+    style={
+      Object {
+        "alignSelf": "center",
+        "margin": "3%",
+      }
+    }
+  >
+    No comments yet, be the first to comment on this Great Image!
+  </p>
+</div>
+`;
+
+exports[`FullScreenComments should show comment object with a string "No comments yet, be the first to comment on this Great Image!", no comments key. 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "RGB(256,256,256)",
+      "borderBottom": "inset",
+      "display": "flex",
+      "flexDirection": "column",
+      "height": "auto",
+      "justifyContent": "center",
+      "marginBottom": "3%",
+      "marginTop": "3%",
+      "maxWidth": "500px",
+      "width": "auto",
+    }
+  }
+>
+  <p
+    style={
+      Object {
+        "alignSelf": "center",
+        "fontSize": "1.3em",
+        "fontWeight": "bold",
+      }
+    }
+  >
+    User Comments
+  </p>
+  <p
+    style={
+      Object {
+        "alignSelf": "center",
+        "margin": "3%",
+      }
+    }
+  >
+    No comments yet, be the first to comment on this Great Image!
+  </p>
+</div>
+`;

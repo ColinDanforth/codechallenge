@@ -11,7 +11,7 @@ const rootTitleStyle={
   width: 'auto',
   height: 'auto',
   backgroundColor: '#FFF',
-  border: 'inset',
+  borderBottom: 'inset',
 }
 
 const Title = (props) => {

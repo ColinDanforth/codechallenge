@@ -10,8 +10,8 @@ const rootCommentDiv = {
   height: 'auto',
   marginTop: '3%',
   marginBottom: '3%',
-  backgroundColor: 'RGBA(256,256,256,0.9)',
-  border: 'inset'
+  backgroundColor: 'RGB(256,256,256)',
+  borderBottom: 'inset'
 }
 
 const pStyleWrapped = {
@@ -52,7 +52,7 @@ const commentBlock = {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
-  margin: '2%',
+  margin: '0.5%',
   border: 'outset',
   background: 'RGBA(256,256,256,1)'
 }
@@ -70,6 +70,12 @@ class FullScreenComments extends React.Component{
     }
 
     this.commentsBlock = this.commentsBlock.bind(this)
+  }
+
+  componentWillMount(){
+    this.setState({
+      comments: this.props.thisImagesComments
+    })
   }
 
   componentDidUpdate(){

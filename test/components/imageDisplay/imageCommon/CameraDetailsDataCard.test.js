@@ -10,7 +10,7 @@ test('CameraDetailsDataCard should display LensDetailCard, and appropriate strin
     },
     camera: "Olympus M.Zuiko Digital ED 12-40mm f/2.8 PRO",
     shutter_speed: 'test string',
-    aperture: 'test string'
+    aperture: 'test string',
   }
 
   const component = renderer.create(

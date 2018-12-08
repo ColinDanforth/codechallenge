@@ -5,7 +5,7 @@ exports[`CameraDetailsDataCard should display "Lens Info: no details" 1`] = `
   style={
     Object {
       "backgroundColor": "RGBA(256,256,256,1)",
-      "border": "inset",
+      "borderBottom": "inset",
       "marginTop": "2%",
     }
   }
@@ -29,7 +29,7 @@ exports[`CameraDetailsDataCard should display LensDetailCard, and appropriate st
   style={
     Object {
       "backgroundColor": "RGBA(256,256,256,1)",
-      "border": "inset",
+      "borderBottom": "inset",
       "marginTop": "2%",
     }
   }
@@ -137,7 +137,7 @@ exports[`CameraDetailsDataCard should display LensDetailCard, and appropriate st
   style={
     Object {
       "backgroundColor": "RGBA(256,256,256,1)",
-      "border": "inset",
+      "borderBottom": "inset",
       "marginTop": "2%",
     }
   }
@@ -209,7 +209,7 @@ exports[`CameraDetailsDataCard should display appropriate strings including lens
   style={
     Object {
       "backgroundColor": "RGBA(256,256,256,1)",
-      "border": "inset",
+      "borderBottom": "inset",
       "marginTop": "2%",
     }
   }

@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FullScreenUserCard should display a group of comment elements showing the appropriate text from the testData object 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "column",
+      "height": "auto",
+      "justifyContent": "flex-start",
+      "marginLeft": "2%",
+      "marginRight": "2%",
+      "marginTop": "1%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "marginBottom": "2%",
+        "maxWidth": "100vw",
+        "width": "auto",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFF",
+          "borderBottom": "inset",
+          "display": "flex",
+          "flexDirection": "Column",
+          "height": "auto",
+          "justifyContent": "center",
+          "minWidth": "600px",
+          "width": "auto",
+        }
+      }
+    >
+      <h1>
+        test name
+      </h1>
+      <div
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "test description",
+          }
+        }
+        style={
+          Object {
+            "height": "auto",
+            "margin": "3%",
+            "maxWidth": "820px",
+            "minWidth": "600px",
+            "width": "auto",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "height": "auto",
+        "maxWidth": "820px",
+        "minWidth": "820px",
+        "width": "auto",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "#FFF",
+          "borderBottom": "inset",
+          "borderRight": "inset",
+          "display": "flex",
+          "flexDirection": "row",
+          "height": "auto",
+          "justifyContent": "flex-start",
+          "maxWidth": "820px",
+          "minWidth": "820px",
+        }
+      }
+    >
+      <img
+        alt="avatar"
+        src="http://google.ca"
+        style={
+          Object {
+            "height": "auto",
+            "margin": "0.3%",
+            "maxHeight": "100px",
+            "width": "auto",
+          }
+        }
+      />
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "row",
+            "height": "auto",
+            "justifyContent": "space-between",
+            "marginLeft": "10px",
+            "maxWidth": "700px",
+            "minWidth": "700px",
+            "width": "auto",
+          }
+        }
+      >
+        <div>
+          <p
+            style={
+              Object {
+                "height": "auto",
+                "maxWidth": "400px",
+                "minWidth": "400px",
+                "width": "auto",
+              }
+            }
+          >
+            Photographer: 
+            Test User
+          </p>
+          <p
+            style={
+              Object {
+                "height": "auto",
+                "maxWidth": "400px",
+                "minWidth": "400px",
+                "width": "auto",
+              }
+            }
+          >
+            Rating: 
+            99.99999995
+            %
+          </p>
+        </div>
+        <div>
+          <img
+            alt="like"
+            src="test-file-stub"
+            style={
+              Object {
+                "height": "auto",
+                "marginRight": "10px",
+                "marginTop": "5px",
+                "maxWidth": "40px",
+                "width": "auto",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "height": "auto",
+        "marginBottom": "4%",
+        "maxWidth": "820px",
+        "minWidth": "820px",
+        "width": "auto",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "RGBA(256,256,256,1)",
+          "borderBottom": "inset",
+          "marginTop": "2%",
+        }
+      }
+    >
+      <p
+        style={
+          Object {
+            "marginBottom": "15px",
+            "marginLeft": "30px",
+            "marginRight": "30px",
+          }
+        }
+      >
+        Camera: 
+        Olympus M.Zuiko Digital ED 12-40mm f/2.8 PRO
+      </p>
+      <p
+        style={
+          Object {
+            "marginBottom": "15px",
+            "marginLeft": "30px",
+            "marginRight": "30px",
+          }
+        }
+      >
+        Shutter Speed: 
+        test string
+      </p>
+      <p
+        style={
+          Object {
+            "marginBottom": "15px",
+            "marginLeft": "30px",
+            "marginRight": "30px",
+          }
+        }
+      >
+        Aperture: 
+        test string
+      </p>
+      <div>
+        <p
+          style={
+            Object {
+              "marginBottom": "15px",
+              "marginLeft": "30px",
+              "marginRight": "30px",
+            }
+          }
+        >
+          Lens Info:
+        </p>
+        <p
+          style={
+            Object {
+              "marginBottom": "15px",
+              "marginLeft": "60px",
+              "marginRight": "30px",
+            }
+          }
+        >
+          Name: 
+          Olympus M.Zuiko Digital ED 12-40mm f/2.8 PRO
+        </p>
+        <p
+          style={
+            Object {
+              "marginBottom": "15px",
+              "marginLeft": "60px",
+              "marginRight": "30px",
+            }
+          }
+        >
+          Feature: 
+          Micro Four Thirds System
+        </p>
+        <p
+          style={
+            Object {
+              "marginBottom": "15px",
+              "marginLeft": "60px",
+              "marginRight": "30px",
+            }
+          }
+        >
+          24-80mm (35mm Equivalent)
+        </p>
+        <p
+          style={
+            Object {
+              "marginBottom": "15px",
+              "marginLeft": "60px",
+              "marginRight": "30px",
+            }
+          }
+        >
+          Aperture Range: f/2.8 to f/22
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
