@@ -8,7 +8,8 @@ const rootCard = {
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  width: '70%',
+  maxWidth: '70vw',
+  width: 'auto',
   height: 'auto',
   marginBottom: '1%',
   backgroundColor: '#FFF',
@@ -21,23 +22,25 @@ const titleDiv = {
 }
 
 const dataCardPosition = {
-  maxWidth: '820px',
-  minWidth: '820px',
+  // minWidth: '70vw',
+  // maxWidth: '70vw',
   maxHeight:'200',
   minHeight: '100px',
   width: 'auto',
   height:'auto',
   margin: '2%',
+  flex: '1'
 }
 
 const imageWrapper = {
+  flex: '1',
   marginTop: '2%',
   marginBottom: '2%',
 }
 
 const imageObjectStyle = {
-  maxWidth: '840px',
-  minWidth: '840px',
+  maxWidth: '70vw',
+  minWidth: '70vw',
   width: 'auto',
   height: 'auto',
   cursor: 'pointer',

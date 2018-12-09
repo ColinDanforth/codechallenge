@@ -6,24 +6,29 @@ const rootDataCardStyle={
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'flex-start',
-  maxWidth: '817px',
-  minWidth: '817px',
+  maxWidth: '68vw',
+  minWidth: '68vw',
   height: 'auto',
   backgroundColor: '#FFF',
   borderBottom: 'inset',
   borderRight: 'inset',
 }
 
-const textBlock = {
+const dataBlock = {
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
-  maxWidth: '700px',
-  minWidth: '700px',
   marginLeft: '10px',
   width: 'auto',
   height: 'auto',
+  flex: '1',
 }
+
+// const textBlock = {
+//   display: 'flex',
+//   flexDirection: 'column',
+//   justifyContent: 'space-between',
+// }
 
 const imageHeight = {
   maxHeight: '100px',
@@ -33,8 +38,7 @@ const imageHeight = {
 }
 
 const pStyle = {
-  maxWidth: '400px',
-  minWidth: '400px',
+  flex: '1',
   width: 'auto',
   height: 'auto',
 }
@@ -52,7 +56,7 @@ const UserDataCard = (props) =>{
     return (
       <div style={rootDataCardStyle}>
         <img style={imageHeight} src={props.dataObject.user.avatars.default.https} alt="avatar"/>
-        <div style={textBlock}>
+        <div style={dataBlock}>
           <div>
             <p style={pStyle}>Photographer: {props.dataObject.user.fullname}</p>
             <p style={pStyle}>Rating: {props.dataObject.rating}%</p>
