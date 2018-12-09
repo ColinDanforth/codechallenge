@@ -181,7 +181,7 @@ class ImagePage extends React.Component{
   }
 
   loadImageFeed() {
-    if (this.state.images.length > 0) {
+    if (this.state.images.length > 0 && this.state.images[0] !== null && this.state.images[0] !== undefined) {
       return (
         <div style={this.state.feedStyle}>
           {this.state.images.map((thisImageSet, j) => thisImageSet.photos.map((object, i) => <ImageItem key={j+i} thisItem={object} makeFullScreen={this.makeFullScreen}/>))}
