@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import client from '../../client'
 import FullScreenDataCard from "./FullScreenDataCard"
+import close from "../../../localImages/close.png"
 
 const getImage = async(id) => {
   return await client.fetchImage(id)
@@ -11,9 +12,16 @@ const getComments = async(id) => {
   return await client.fetchImageComments(id)
 }
 
-const imageItem = {
+const rootDiv = {
   maxWidth: '100vw',
   maxHeight: '100vh',
+  width: 'auto',
+  height: 'auto',
+}
+
+const imageItem = {
+  maxWidth: '98vw',
+  maxHeight: '98vh',
   width: 'auto',
   height: 'auto',
 }
@@ -22,9 +30,29 @@ const dataCardStyle={
   position: 'absolute',
   top: '0',
   left: '0',
-  width: '100%',
+  width: '100vw',
   height: '100vh',
   overflowY: 'scroll',
+}
+
+const xStyle = {
+  maxWidth: '45px',
+  minWidth: '35px',
+  width: 'auto',
+  height: 'auto',
+  zIndex: '52'
+}
+
+const closeWrapperDiv = {
+  position: 'fixed',
+  top: '3px',
+  left: '3px',
+  backgroundColor: 'RGB(150,150,150)',
+  height: 'auto',
+  width: 'auto',
+  borderRadius: '20%',
+  cursor: 'pointer',
+  zIndex: '50',
 }
 
 class FullScreenImageItem extends React.Component{
@@ -44,6 +72,8 @@ class FullScreenImageItem extends React.Component{
       dataObject: {},
       commentsObject: {},
     }
+
+    this.handleCloseFullScreen = this.handleCloseFullScreen.bind(this)
   }
 
   componentDidMount(){
@@ -67,10 +97,17 @@ class FullScreenImageItem extends React.Component{
       })
   }
 
+  handleCloseFullScreen(){
+    this.props.closeFullScreen()
+  }
+
 
   render(){
     return(
-      <div>
+      <div style={rootDiv}>
+        <div style={closeWrapperDiv} onClick={this.handleCloseFullScreen}>
+          <img src={close} alt="close" style={xStyle}/>
+        </div>
         <div style={this.state.imageDiv} onClick={this.handleCloseFullScreen}>
           <img style={imageItem}
                src={this.state.image}
@@ -82,7 +119,6 @@ class FullScreenImageItem extends React.Component{
             thisItem={this.props.thisItem}
             thisDataObject={this.state.dataObject}
             thisImagesComments={this.state.commentsObject}
-            closeFullScreen={this.props.closeFullScreen}
           />
         </div>
       </div>

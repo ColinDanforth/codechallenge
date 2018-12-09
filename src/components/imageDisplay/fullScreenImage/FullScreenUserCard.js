@@ -8,6 +8,8 @@ const rootDiv={
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'flex-start',
+  maxWidth: '100vw',
+  width: 'auto',
   height: 'auto',
   marginTop: '1%',
   marginRight: '2%',

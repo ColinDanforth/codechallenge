@@ -24,36 +24,6 @@ exports[`FullScreenUserCard should display the below data object in FullScreenUs
   <div
     style={
       Object {
-        "backgroundColor": "RGBA(150,150,150,0.6)",
-        "borderRadius": "20%",
-        "height": "auto",
-        "left": "0",
-        "position": "fixed",
-        "top": "0",
-        "width": "auto",
-        "zIndex": "40",
-      }
-    }
-  >
-    <img
-      alt="close"
-      onClick={[Function]}
-      src="test-file-stub"
-      style={
-        Object {
-          "cursor": "pointer",
-          "height": "auto",
-          "maxWidth": "45px",
-          "minWidth": "35px",
-          "width": "auto",
-          "zIndex": "40",
-        }
-      }
-    />
-  </div>
-  <div
-    style={
-      Object {
         "display": "flex",
         "flexDirection": "column",
         "height": "auto",
@@ -61,6 +31,8 @@ exports[`FullScreenUserCard should display the below data object in FullScreenUs
         "marginLeft": "2%",
         "marginRight": "2%",
         "marginTop": "1%",
+        "maxWidth": "100vw",
+        "width": "auto",
       }
     }
   >
@@ -129,8 +101,8 @@ exports[`FullScreenUserCard should display the below data object in FullScreenUs
             "flexDirection": "row",
             "height": "auto",
             "justifyContent": "flex-start",
-            "maxWidth": "820px",
-            "minWidth": "820px",
+            "maxWidth": "817px",
+            "minWidth": "817px",
           }
         }
       >
@@ -515,36 +487,6 @@ exports[`FullScreenUserCard should display the below data object in FullScreenUs
   <div
     style={
       Object {
-        "backgroundColor": "RGBA(150,150,150,0.6)",
-        "borderRadius": "20%",
-        "height": "auto",
-        "left": "0",
-        "position": "fixed",
-        "top": "0",
-        "width": "auto",
-        "zIndex": "40",
-      }
-    }
-  >
-    <img
-      alt="close"
-      onClick={[Function]}
-      src="test-file-stub"
-      style={
-        Object {
-          "cursor": "pointer",
-          "height": "auto",
-          "maxWidth": "45px",
-          "minWidth": "35px",
-          "width": "auto",
-          "zIndex": "40",
-        }
-      }
-    />
-  </div>
-  <div
-    style={
-      Object {
         "display": "flex",
         "flexDirection": "column",
         "height": "auto",
@@ -552,6 +494,8 @@ exports[`FullScreenUserCard should display the below data object in FullScreenUs
         "marginLeft": "2%",
         "marginRight": "2%",
         "marginTop": "1%",
+        "maxWidth": "100vw",
+        "width": "auto",
       }
     }
   >
@@ -620,8 +564,8 @@ exports[`FullScreenUserCard should display the below data object in FullScreenUs
             "flexDirection": "row",
             "height": "auto",
             "justifyContent": "flex-start",
-            "maxWidth": "820px",
-            "minWidth": "820px",
+            "maxWidth": "817px",
+            "minWidth": "817px",
           }
         }
       >
