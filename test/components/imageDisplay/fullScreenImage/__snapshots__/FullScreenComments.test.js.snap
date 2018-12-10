@@ -4,15 +4,15 @@ exports[`FullScreenComments should display a group of comment elements showing t
 <div
   style={
     Object {
+      "alignItems": "center",
       "backgroundColor": "RGB(256,256,256)",
       "borderBottom": "inset",
       "display": "flex",
+      "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
       "flexDirection": "column",
       "height": "auto",
-      "justifyContent": "center",
-      "marginBottom": "3%",
-      "marginTop": "3%",
-      "maxWidth": "500px",
+      "justifyContent": "space-around",
+      "maxWidth": "100%",
       "width": "auto",
     }
   }
@@ -21,6 +21,7 @@ exports[`FullScreenComments should display a group of comment elements showing t
     style={
       Object {
         "alignSelf": "center",
+        "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
         "fontSize": "1.3em",
         "fontWeight": "bold",
       }
@@ -34,9 +35,14 @@ exports[`FullScreenComments should display a group of comment elements showing t
         "background": "RGBA(256,256,256,1)",
         "border": "outset",
         "display": "flex",
+        "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
         "flexDirection": "column",
+        "height": "auto",
         "justifyContent": "center",
-        "margin": "0.5%",
+        "margin": "2%",
+        "maxWidth": "96%",
+        "minWidth": "96%",
+        "width": "auto",
       }
     }
   >
@@ -45,6 +51,7 @@ exports[`FullScreenComments should display a group of comment elements showing t
         Object {
           "alignItems": "flex-start",
           "display": "flex",
+          "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
           "flexDirection": "row",
           "justifyContent": "space-between",
           "marginLeft": "1%",
@@ -55,8 +62,9 @@ exports[`FullScreenComments should display a group of comment elements showing t
       <p
         style={
           Object {
+            "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
             "fontWeight": "bold",
-            "maxWidth": "500px",
+            "maxWidth": "90%",
             "width": "auto",
             "wordWrap": "normal",
           }
@@ -71,6 +79,7 @@ exports[`FullScreenComments should display a group of comment elements showing t
     <div
       style={
         Object {
+          "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
           "marginLeft": "2%",
           "marginRight": "2%",
           "width": "auto",
@@ -80,7 +89,8 @@ exports[`FullScreenComments should display a group of comment elements showing t
       <p
         style={
           Object {
-            "maxWidth": "500px",
+            "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+            "maxWidth": "100%",
             "width": "auto",
             "wordWrap": "normal",
           }
@@ -96,9 +106,14 @@ exports[`FullScreenComments should display a group of comment elements showing t
         "background": "RGBA(256,256,256,1)",
         "border": "outset",
         "display": "flex",
+        "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
         "flexDirection": "column",
+        "height": "auto",
         "justifyContent": "center",
-        "margin": "0.5%",
+        "margin": "2%",
+        "maxWidth": "96%",
+        "minWidth": "96%",
+        "width": "auto",
       }
     }
   >
@@ -107,6 +122,7 @@ exports[`FullScreenComments should display a group of comment elements showing t
         Object {
           "alignItems": "flex-start",
           "display": "flex",
+          "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
           "flexDirection": "row",
           "justifyContent": "space-between",
           "marginLeft": "1%",
@@ -117,8 +133,9 @@ exports[`FullScreenComments should display a group of comment elements showing t
       <p
         style={
           Object {
+            "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
             "fontWeight": "bold",
-            "maxWidth": "500px",
+            "maxWidth": "90%",
             "width": "auto",
             "wordWrap": "normal",
           }
@@ -133,6 +150,7 @@ exports[`FullScreenComments should display a group of comment elements showing t
     <div
       style={
         Object {
+          "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
           "marginLeft": "2%",
           "marginRight": "2%",
           "width": "auto",
@@ -142,7 +160,8 @@ exports[`FullScreenComments should display a group of comment elements showing t
       <p
         style={
           Object {
-            "maxWidth": "500px",
+            "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+            "maxWidth": "100%",
             "width": "auto",
             "wordWrap": "normal",
           }
@@ -159,15 +178,15 @@ exports[`FullScreenComments should show comment object with a string "No comment
 <div
   style={
     Object {
+      "alignItems": "center",
       "backgroundColor": "RGB(256,256,256)",
       "borderBottom": "inset",
       "display": "flex",
+      "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
       "flexDirection": "column",
       "height": "auto",
-      "justifyContent": "center",
-      "marginBottom": "3%",
-      "marginTop": "3%",
-      "maxWidth": "500px",
+      "justifyContent": "space-around",
+      "maxWidth": "100%",
       "width": "auto",
     }
   }
@@ -176,6 +195,7 @@ exports[`FullScreenComments should show comment object with a string "No comment
     style={
       Object {
         "alignSelf": "center",
+        "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
         "fontSize": "1.3em",
         "fontWeight": "bold",
       }
@@ -187,6 +207,7 @@ exports[`FullScreenComments should show comment object with a string "No comment
     style={
       Object {
         "alignSelf": "center",
+        "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
         "margin": "3%",
       }
     }
@@ -200,15 +221,15 @@ exports[`FullScreenComments should show comment object with a string "No comment
 <div
   style={
     Object {
+      "alignItems": "center",
       "backgroundColor": "RGB(256,256,256)",
       "borderBottom": "inset",
       "display": "flex",
+      "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
       "flexDirection": "column",
       "height": "auto",
-      "justifyContent": "center",
-      "marginBottom": "3%",
-      "marginTop": "3%",
-      "maxWidth": "500px",
+      "justifyContent": "space-around",
+      "maxWidth": "100%",
       "width": "auto",
     }
   }
@@ -217,6 +238,7 @@ exports[`FullScreenComments should show comment object with a string "No comment
     style={
       Object {
         "alignSelf": "center",
+        "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
         "fontSize": "1.3em",
         "fontWeight": "bold",
       }
@@ -228,6 +250,7 @@ exports[`FullScreenComments should show comment object with a string "No comment
     style={
       Object {
         "alignSelf": "center",
+        "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
         "margin": "3%",
       }
     }

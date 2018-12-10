@@ -12,6 +12,8 @@ test('FullScreenUserCard should display a group of comment elements showing the 
         }
       },
       fullname: 'Test User',
+      city: 'Toronto',
+      country: 'Canada',
 
     },
     rating: '99.99999995',
@@ -22,14 +24,11 @@ test('FullScreenUserCard should display a group of comment elements showing the 
     camera: "Olympus M.Zuiko Digital ED 12-40mm f/2.8 PRO",
     shutter_speed: 'test string',
     aperture: 'test string',
-  }
-
-  const testItem = {
     description: 'test description',
   }
 
   const component = renderer.create(
-    <FullScreenUserCard dataObject={testDataObject} thisItem={testItem}/>
+    <FullScreenUserCard dataObject={testDataObject} thisItem={testDataObject}/>
   )
 
   let tree = component.toJSON()

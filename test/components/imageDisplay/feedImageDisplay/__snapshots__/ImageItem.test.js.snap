@@ -11,7 +11,8 @@ exports[`ImageItem should display the base ImageItem component with all loaded t
       "height": "auto",
       "justifyContent": "center",
       "marginBottom": "1%",
-      "width": "70%",
+      "maxWidth": "45vw",
+      "width": "auto",
     }
   }
 >
@@ -19,7 +20,7 @@ exports[`ImageItem should display the base ImageItem component with all loaded t
     style={
       Object {
         "marginTop": "2%",
-        "maxWidth": "100vw",
+        "maxWidth": "45vw",
         "width": "auto",
       }
     }
@@ -31,10 +32,11 @@ exports[`ImageItem should display the base ImageItem component with all loaded t
           "backgroundColor": "#FFF",
           "borderBottom": "inset",
           "display": "flex",
+          "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
           "flexDirection": "Column",
           "height": "auto",
           "justifyContent": "center",
-          "minWidth": "600px",
+          "minWidth": "40vw",
           "width": "auto",
         }
       }
@@ -54,6 +56,7 @@ exports[`ImageItem should display the base ImageItem component with all loaded t
   <div
     style={
       Object {
+        "flex": "1",
         "marginBottom": "2%",
         "marginTop": "2%",
       }
@@ -67,8 +70,7 @@ exports[`ImageItem should display the base ImageItem component with all loaded t
         Object {
           "cursor": "pointer",
           "height": "auto",
-          "maxWidth": "840px",
-          "minWidth": "840px",
+          "maxWidth": "45vw",
           "width": "auto",
         }
       }
@@ -77,12 +79,12 @@ exports[`ImageItem should display the base ImageItem component with all loaded t
   <div
     style={
       Object {
+        "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
         "height": "auto",
         "margin": "2%",
-        "maxHeight": "200",
-        "maxWidth": "820px",
+        "maxHeight": "200px",
         "minHeight": "100px",
-        "minWidth": "820px",
+        "minWidth": "96%",
         "width": "auto",
       }
     }
@@ -90,87 +92,125 @@ exports[`ImageItem should display the base ImageItem component with all loaded t
     <div
       style={
         Object {
+          "alignItems": "center",
           "backgroundColor": "#FFF",
           "borderBottom": "inset",
           "borderRight": "inset",
           "display": "flex",
-          "flexDirection": "row",
+          "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+          "flexDirection": "column",
           "height": "auto",
           "justifyContent": "flex-start",
-          "maxWidth": "817px",
-          "minWidth": "817px",
+          "minWidth": "100%",
+          "width": "auto",
         }
       }
     >
-      <img
-        alt="avatar"
-        src="http://google.ca"
-        style={
-          Object {
-            "height": "auto",
-            "margin": "0.3%",
-            "maxHeight": "100px",
-            "width": "auto",
-          }
-        }
-      />
       <div
         style={
           Object {
+            "alignItems": "center",
             "display": "flex",
+            "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
             "flexDirection": "row",
             "height": "auto",
-            "justifyContent": "space-between",
-            "marginLeft": "10px",
-            "maxWidth": "700px",
-            "minWidth": "700px",
+            "justifyContent": "flex-start",
+            "minWidth": "100%",
             "width": "auto",
           }
         }
       >
-        <div>
-          <p
+        <img
+          alt="avatar"
+          src="http://google.ca"
+          style={
+            Object {
+              "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+              "height": "auto",
+              "margin": "0.3%",
+              "maxHeight": "120px",
+              "width": "auto",
+            }
+          }
+        />
+        <div
+          style={
+            Object {
+              "display": "flex",
+              "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+              "flexDirection": "row",
+              "height": "auto",
+              "justifyContent": "space-between",
+              "marginLeft": "1%",
+              "minWidth": "78%",
+              "width": "auto",
+            }
+          }
+        >
+          <div
             style={
               Object {
+                "display": "flex",
+                "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+                "flexDirection": "column",
                 "height": "auto",
-                "maxWidth": "400px",
-                "minWidth": "400px",
+                "justifyContent": "flex-start",
+                "minWidth": "85%",
                 "width": "auto",
               }
             }
           >
-            Photographer: 
-            Test User
-          </p>
-          <p
-            style={
-              Object {
-                "height": "auto",
-                "maxWidth": "400px",
-                "minWidth": "400px",
-                "width": "auto",
+            <p
+              style={
+                Object {
+                  "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+                  "height": "auto",
+                  "width": "auto",
+                }
               }
-            }
-          >
-            Rating: 
-            99.99999995
-            %
-          </p>
-        </div>
-        <div>
-          <img
-            alt="like"
-            src="test-file-stub"
+            >
+              Photographer: 
+              Test User
+            </p>
+            <p
+              style={
+                Object {
+                  "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+                  "height": "auto",
+                  "width": "auto",
+                }
+              }
+            >
+              Rating: 
+              99.99999995
+              %
+            </p>
+          </div>
+          <div
             style={
               Object {
+                "alignSelf": "right",
+                "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
                 "height": "auto",
-                "marginRight": "10px",
                 "marginTop": "5px",
-                "maxWidth": "40px",
+                "maxHeight": "40px",
                 "width": "auto",
               }
             }
-          />
+          >
+            <img
+              alt="like"
+              src="test-file-stub"
+              style={
+                Object {
+                  "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+                  "height": "auto",
+                  "maxWidth": "40px",
+                  "width": "auto",
+                }
+              }
+            />
+          </div>
         </div>
       </div>
     </div>

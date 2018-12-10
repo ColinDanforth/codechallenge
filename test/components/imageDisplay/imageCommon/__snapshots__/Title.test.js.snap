@@ -8,10 +8,11 @@ exports[`Title should display input test string, and a div in place of descripti
       "backgroundColor": "#FFF",
       "borderBottom": "inset",
       "display": "flex",
+      "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
       "flexDirection": "Column",
       "height": "auto",
       "justifyContent": "center",
-      "minWidth": "600px",
+      "minWidth": "40vw",
       "width": "auto",
     }
   }
@@ -37,10 +38,11 @@ exports[`Title should display input test string, and description block with the 
       "backgroundColor": "#FFF",
       "borderBottom": "inset",
       "display": "flex",
+      "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
       "flexDirection": "Column",
       "height": "auto",
       "justifyContent": "center",
-      "minWidth": "600px",
+      "minWidth": "40vw",
       "width": "auto",
     }
   }
@@ -56,11 +58,10 @@ exports[`Title should display input test string, and description block with the 
     }
     style={
       Object {
+        "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
         "height": "auto",
         "margin": "3%",
-        "maxWidth": "820px",
-        "minWidth": "600px",
-        "width": "auto",
+        "width": "90%",
       }
     }
   />
@@ -75,10 +76,11 @@ exports[`Title should display untitled, and a div in place of description with s
       "backgroundColor": "#FFF",
       "borderBottom": "inset",
       "display": "flex",
+      "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
       "flexDirection": "Column",
       "height": "auto",
       "justifyContent": "center",
-      "minWidth": "600px",
+      "minWidth": "40vw",
       "width": "auto",
     }
   }

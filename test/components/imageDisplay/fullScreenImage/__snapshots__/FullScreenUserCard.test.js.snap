@@ -5,13 +5,10 @@ exports[`FullScreenUserCard should display a group of comment elements showing t
   style={
     Object {
       "display": "flex",
+      "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
       "flexDirection": "column",
       "height": "auto",
-      "justifyContent": "flex-start",
-      "marginLeft": "2%",
-      "marginRight": "2%",
-      "marginTop": "1%",
-      "maxWidth": "100vw",
+      "justifyContent": "space-between",
       "width": "auto",
     }
   }
@@ -19,8 +16,9 @@ exports[`FullScreenUserCard should display a group of comment elements showing t
   <div
     style={
       Object {
+        "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+        "height": "auto",
         "marginBottom": "2%",
-        "maxWidth": "100vw",
         "width": "auto",
       }
     }
@@ -32,10 +30,11 @@ exports[`FullScreenUserCard should display a group of comment elements showing t
           "backgroundColor": "#FFF",
           "borderBottom": "inset",
           "display": "flex",
+          "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
           "flexDirection": "Column",
           "height": "auto",
           "justifyContent": "center",
-          "minWidth": "600px",
+          "minWidth": "40vw",
           "width": "auto",
         }
       }
@@ -51,11 +50,10 @@ exports[`FullScreenUserCard should display a group of comment elements showing t
         }
         style={
           Object {
+            "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
             "height": "auto",
             "margin": "3%",
-            "maxWidth": "820px",
-            "minWidth": "600px",
-            "width": "auto",
+            "width": "90%",
           }
         }
       />
@@ -64,9 +62,9 @@ exports[`FullScreenUserCard should display a group of comment elements showing t
   <div
     style={
       Object {
+        "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
         "height": "auto",
-        "maxWidth": "820px",
-        "minWidth": "820px",
+        "marginBottom": "2%",
         "width": "auto",
       }
     }
@@ -74,98 +72,166 @@ exports[`FullScreenUserCard should display a group of comment elements showing t
     <div
       style={
         Object {
+          "alignItems": "center",
           "backgroundColor": "#FFF",
           "borderBottom": "inset",
           "borderRight": "inset",
           "display": "flex",
-          "flexDirection": "row",
+          "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+          "flexDirection": "column",
           "height": "auto",
           "justifyContent": "flex-start",
-          "maxWidth": "817px",
-          "minWidth": "817px",
+          "minWidth": "100%",
+          "width": "auto",
         }
       }
     >
-      <img
-        alt="avatar"
-        src="http://google.ca"
-        style={
-          Object {
-            "height": "auto",
-            "margin": "0.3%",
-            "maxHeight": "100px",
-            "width": "auto",
-          }
-        }
-      />
       <div
         style={
           Object {
+            "alignItems": "center",
             "display": "flex",
+            "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
             "flexDirection": "row",
             "height": "auto",
-            "justifyContent": "space-between",
-            "marginLeft": "10px",
-            "maxWidth": "700px",
-            "minWidth": "700px",
+            "justifyContent": "flex-start",
+            "minWidth": "100%",
             "width": "auto",
           }
         }
       >
-        <div>
-          <p
+        <img
+          alt="avatar"
+          src="http://google.ca"
+          style={
+            Object {
+              "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+              "height": "auto",
+              "margin": "0.3%",
+              "maxHeight": "120px",
+              "width": "auto",
+            }
+          }
+        />
+        <div
+          style={
+            Object {
+              "display": "flex",
+              "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+              "flexDirection": "row",
+              "height": "auto",
+              "justifyContent": "space-between",
+              "marginLeft": "1%",
+              "minWidth": "78%",
+              "width": "auto",
+            }
+          }
+        >
+          <div
             style={
               Object {
+                "display": "flex",
+                "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+                "flexDirection": "column",
                 "height": "auto",
-                "maxWidth": "400px",
-                "minWidth": "400px",
+                "justifyContent": "flex-start",
+                "minWidth": "85%",
                 "width": "auto",
               }
             }
           >
-            Photographer: 
-            Test User
-          </p>
-          <p
-            style={
-              Object {
-                "height": "auto",
-                "maxWidth": "400px",
-                "minWidth": "400px",
-                "width": "auto",
+            <p
+              style={
+                Object {
+                  "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+                  "height": "auto",
+                  "width": "auto",
+                }
               }
-            }
-          >
-            Rating: 
-            99.99999995
-            %
-          </p>
-        </div>
-        <div>
-          <img
-            alt="like"
-            src="test-file-stub"
+            >
+              Photographer: 
+              Test User
+            </p>
+            <p
+              style={
+                Object {
+                  "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+                  "height": "auto",
+                  "width": "auto",
+                }
+              }
+            >
+              Rating: 
+              99.99999995
+              %
+            </p>
+          </div>
+          <div
             style={
               Object {
+                "alignSelf": "right",
+                "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
                 "height": "auto",
-                "marginRight": "10px",
                 "marginTop": "5px",
-                "maxWidth": "40px",
+                "maxHeight": "40px",
                 "width": "auto",
               }
             }
-          />
+          >
+            <img
+              alt="like"
+              src="test-file-stub"
+              style={
+                Object {
+                  "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+                  "height": "auto",
+                  "maxWidth": "40px",
+                  "width": "auto",
+                }
+              }
+            />
+          </div>
         </div>
+      </div>
+      <div
+        style={
+          Object {
+            "alignItems": "left",
+            "display": "flex",
+            "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+            "flexDirection": "column",
+            "height": "auto",
+            "justifyContent": "flex-start",
+            "marginTop": "1%",
+            "minWidth": "100%",
+            "width": "auto",
+          }
+        }
+      >
+        <p
+          style={
+            Object {
+              "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+              "marginLeft": "2%",
+              "marginRight": "2%",
+              "marginTop": "1%",
+            }
+          }
+        >
+          Location: 
+          Toronto
+          , 
+          Canada
+        </p>
       </div>
     </div>
   </div>
   <div
     style={
       Object {
+        "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
         "height": "auto",
-        "marginBottom": "4%",
-        "maxWidth": "820px",
-        "minWidth": "820px",
+        "marginBottom": "2%",
         "width": "auto",
       }
     }
@@ -175,14 +241,18 @@ exports[`FullScreenUserCard should display a group of comment elements showing t
         Object {
           "backgroundColor": "RGBA(256,256,256,1)",
           "borderBottom": "inset",
-          "marginTop": "2%",
+          "display": "flex",
+          "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+          "flexDirection": "column",
+          "justifyContent": "space-between",
+          "marginTop": "1%",
         }
       }
     >
       <p
         style={
           Object {
-            "marginBottom": "1%",
+            "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
             "marginLeft": "2%",
             "marginRight": "2%",
             "marginTop": "1%",
@@ -195,7 +265,7 @@ exports[`FullScreenUserCard should display a group of comment elements showing t
       <p
         style={
           Object {
-            "marginBottom": "1%",
+            "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
             "marginLeft": "2%",
             "marginRight": "2%",
             "marginTop": "1%",
@@ -208,7 +278,7 @@ exports[`FullScreenUserCard should display a group of comment elements showing t
       <p
         style={
           Object {
-            "marginBottom": "1%",
+            "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
             "marginLeft": "2%",
             "marginRight": "2%",
             "marginTop": "1%",

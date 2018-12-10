@@ -19,11 +19,10 @@ exports[`Description should display test string 1`] = `
   }
   style={
     Object {
+      "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
       "height": "auto",
       "margin": "3%",
-      "maxWidth": "820px",
-      "minWidth": "600px",
-      "width": "auto",
+      "width": "90%",
     }
   }
 />
@@ -38,11 +37,10 @@ exports[`Description should display test string with <a> element 1`] = `
   }
   style={
     Object {
+      "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
       "height": "auto",
       "margin": "3%",
-      "maxWidth": "820px",
-      "minWidth": "600px",
-      "width": "auto",
+      "width": "90%",
     }
   }
 />

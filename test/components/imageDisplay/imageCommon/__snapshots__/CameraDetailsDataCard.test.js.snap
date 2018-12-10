@@ -6,14 +6,18 @@ exports[`CameraDetailsDataCard should display "Lens Info: no details" 1`] = `
     Object {
       "backgroundColor": "RGBA(256,256,256,1)",
       "borderBottom": "inset",
-      "marginTop": "2%",
+      "display": "flex",
+      "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+      "flexDirection": "column",
+      "justifyContent": "space-between",
+      "marginTop": "1%",
     }
   }
 >
   <p
     style={
       Object {
-        "marginBottom": "1%",
+        "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
         "marginLeft": "2%",
         "marginRight": "2%",
         "marginTop": "1%",
@@ -31,14 +35,18 @@ exports[`CameraDetailsDataCard should display LensDetailCard, and appropriate st
     Object {
       "backgroundColor": "RGBA(256,256,256,1)",
       "borderBottom": "inset",
-      "marginTop": "2%",
+      "display": "flex",
+      "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+      "flexDirection": "column",
+      "justifyContent": "space-between",
+      "marginTop": "1%",
     }
   }
 >
   <p
     style={
       Object {
-        "marginBottom": "1%",
+        "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
         "marginLeft": "2%",
         "marginRight": "2%",
         "marginTop": "1%",
@@ -51,7 +59,7 @@ exports[`CameraDetailsDataCard should display LensDetailCard, and appropriate st
   <p
     style={
       Object {
-        "marginBottom": "1%",
+        "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
         "marginLeft": "2%",
         "marginRight": "2%",
         "marginTop": "1%",
@@ -64,7 +72,7 @@ exports[`CameraDetailsDataCard should display LensDetailCard, and appropriate st
   <p
     style={
       Object {
-        "marginBottom": "1%",
+        "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
         "marginLeft": "2%",
         "marginRight": "2%",
         "marginTop": "1%",
@@ -142,7 +150,11 @@ exports[`CameraDetailsDataCard should display LensDetailCard, and appropriate st
     Object {
       "backgroundColor": "RGBA(256,256,256,1)",
       "borderBottom": "inset",
-      "marginTop": "2%",
+      "display": "flex",
+      "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+      "flexDirection": "column",
+      "justifyContent": "space-between",
+      "marginTop": "1%",
     }
   }
 >
@@ -214,14 +226,18 @@ exports[`CameraDetailsDataCard should display appropriate strings including lens
     Object {
       "backgroundColor": "RGBA(256,256,256,1)",
       "borderBottom": "inset",
-      "marginTop": "2%",
+      "display": "flex",
+      "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+      "flexDirection": "column",
+      "justifyContent": "space-between",
+      "marginTop": "1%",
     }
   }
 >
   <p
     style={
       Object {
-        "marginBottom": "1%",
+        "flex": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
         "marginLeft": "2%",
         "marginRight": "2%",
         "marginTop": "1%",
