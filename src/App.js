@@ -35,7 +35,8 @@ const linkPosition={
   display: 'flex',
   justifyContent: 'center',
   flexDirection: 'row',
-  flex: '1',
+  width: '100%',
+  flex: "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
 }
 
 const linkStyle={
@@ -46,6 +47,7 @@ const linkStyle={
   fontSize: '1.5em',
   textDecoration: 'none',
   color: '#000',
+  flex: "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
 }
 
 const activeStyle={
