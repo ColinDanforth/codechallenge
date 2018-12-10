@@ -7,33 +7,30 @@ import Title from "../../imageCommon/Title"
 const rootDiv={
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'flex-start',
-  maxWidth: '100vw',
+  justifyContent: 'space-between',
   width: 'auto',
   height: 'auto',
-  marginTop: '1%',
-  marginRight: '2%',
-  marginLeft: '2%',
+  flex: "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
 }
 
 const dataCardStyle={
-  maxWidth: '820px',
-  minWidth: '820px',
   width: 'auto',
   height:'auto',
+  marginBottom: '2%',
+  flex: "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
 }
 
 const cameraDetailStyle={
-  maxWidth: '820px',
-  minWidth: '820px',
+  flex: "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
   width: 'auto',
   height:'auto',
-  marginBottom: '4%',
+  marginBottom: '2%',
 }
 
 const titleDiv = {
-  maxWidth: '100vw',
+  flex: "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
   width: 'auto',
+  height: 'auto',
   marginBottom: '2%'
 }
 
@@ -47,7 +44,7 @@ const FullScreenUserCard = (props)  => {
         />
       </div>
       <div style={dataCardStyle}>
-        <UserDataCard dataObject={props.dataObject}/>
+        <UserDataCard dataObject={props.dataObject} thisUserData={props.thisItem} showMoreInfo={true}/>
       </div>
       <div style={cameraDetailStyle}>
         <CameraDetailDataCard dataObject={props.dataObject}/>

@@ -13,10 +13,13 @@ const getComments = async(id) => {
 }
 
 const rootDiv = {
+  display: 'flex',
+  flexDirection: 'column',
   maxWidth: '100vw',
   maxHeight: '100vh',
   width: 'auto',
   height: 'auto',
+  flex: "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
 }
 
 const imageItem = {
@@ -24,15 +27,19 @@ const imageItem = {
   maxHeight: '98vh',
   width: 'auto',
   height: 'auto',
+  flex: "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
 }
 
 const dataCardStyle={
   position: 'absolute',
   top: '0',
   left: '0',
-  width: '100vw',
-  height: '100vh',
+  minWidth: '100%',
+  maxWidth: '100%',
+  width: 'auto',
+  height: '100%',
   overflowY: 'scroll',
+  flex: "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
 }
 
 const xStyle = {

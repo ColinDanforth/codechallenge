@@ -2,11 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const descriptionStyle={
-  minWidth: '600px',
-  maxWidth: '820px',
-  width: 'auto',
+  width: '90%',
   height: 'auto',
   margin: '3%',
+  flex: "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
 }
 
 const DescriptionObject = (props) => {

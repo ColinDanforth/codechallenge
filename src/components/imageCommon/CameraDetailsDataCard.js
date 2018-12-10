@@ -2,16 +2,20 @@ import React from 'react'
 import LensDetailsObject from "./LensDetailsObject"
 
 const userCardBackground={
-  marginTop: '2%',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
   backgroundColor: 'RGBA(256,256,256,1)',
   borderBottom:'inset',
+  marginTop: '1%',
+  flex: "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
 }
 
 const textStyle={
   marginTop: '1%',
   marginLeft: '2%',
   marginRight: '2%',
-  marginBottom: '1%',
+  flex: "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
 }
 
 const isThereLensInfo = (data) => {
@@ -29,6 +33,7 @@ const cameraName = (data) => {
     return <p style={textStyle}>Camera: {data.camera}</p>
   }
 }
+
 const shutterSpeed = (data) => {
   if (data.hasOwnProperty('shutter_speed') && data.shutter_speed !== null && data.shutter_speed.length > 0) {
     return <p style={textStyle}>Shutter Speed: {data.shutter_speed}</p>

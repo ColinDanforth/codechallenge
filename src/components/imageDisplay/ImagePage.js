@@ -24,7 +24,8 @@ const centerRootDiv={
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  width: '100%',
+  minWidth: '100vw',
+  width: 'auto',
   height: 'auto',
   marginTop: '50px',
 }
@@ -63,8 +64,7 @@ class ImagePage extends React.Component{
         justifyContent: 'center',
         alignItems: 'center',
         alignContent: 'center',
-        // maxWidth: '1200px',
-        minWidth: '1200px',
+        maxWidth: '70vw',
         width: 'auto',
         height: 'auto',
       },
@@ -116,7 +116,6 @@ class ImagePage extends React.Component{
   loadMoreImages(){
     fetchImages(this.props.stream, this.state.page)
       .then(response => {
-        console.log(JSON.stringify(response))
         const page = this.state.page + 1
         this.setState({
           images: this.state.images.concat(response),
@@ -134,8 +133,8 @@ class ImagePage extends React.Component{
       justifyContent: this.state.feedStyle.justifyContent,
       alignItems: this.state.feedStyle.alignItems,
       alignContent: this.state.feedStyle.alignContent,
-      // maxWidth: this.state.feedStyle.maxWidth,
-      minWidth: this.state.feedStyle.minWidth,
+      maxWidth: this.state.feedStyle.maxWidth,
+      // minWidth: this.state.feedStyle.minWidth,
       width: this.state.feedStyle.width,
       height: '100vh',
       overflow: 'hidden',

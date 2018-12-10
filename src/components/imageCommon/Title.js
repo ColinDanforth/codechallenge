@@ -7,11 +7,12 @@ const rootTitleStyle={
   flexDirection: 'Column',
   justifyContent: 'center',
   alignItems: 'center',
-  minWidth: '600px',
+  minWidth: '40vw',
   width: 'auto',
   height: 'auto',
   backgroundColor: '#FFF',
   borderBottom: 'inset',
+  flex: "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
 }
 
 const Title = (props) => {
